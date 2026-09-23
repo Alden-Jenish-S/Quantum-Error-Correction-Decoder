@@ -65,8 +65,11 @@ and network access during decoding and cap `solve.py` at 200 KB.
 
 ## Final candidate
 
-`solve.py` constructs a matching graph from the same data-only iid X-error
+`solve.py` uses a frozen 256-entry offline MAP table for the eight exact official
+L=3 `(p, xi)` combinations. The table was generated from the Track-A
+Gaussian-copula model using approximate QMC rectangle probabilities; it is not
+an exact orthant-probability certificate. For L=5/L=7, and for off-grid points,
+the decoder constructs a matching graph from the same data-only iid X-error
 process used by the benchmark when `xi=0`. It precomputes the graph during
-`build_decoder` and performs one batch PyMatching decode. It does not read `xi`
-because the retained candidate is a calibrated iid decoder, not a full
-correlation-aware model.
+`build_decoder` and performs one batch PyMatching decode. There is no runtime
+file dependency or online training.

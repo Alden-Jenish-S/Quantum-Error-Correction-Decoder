@@ -29,6 +29,11 @@ The committed figures are generated from the paired five-seed receipt:
 
 ![Validation-seed variability](plots/hybrid_seed_variability.png)
 
+The paired L=3 effect sizes with approximate fixed-stratum 95% intervals are
+shown in [`plots/hybrid_paired_gain.png`](plots/hybrid_paired_gain.png), and the
+underlying tabular values are in `plots/hybrid_figure_data.csv` with provenance
+in `plots/hybrid_figure_provenance.json`.
+
 The direct syndrome-posterior architecture in `experiments/tracks/D/` remains
 research-only. It showed a stronger signal for L=5 than L=7, but was not merged
 because the L=7 evidence is support-limited and the approved deployment is the

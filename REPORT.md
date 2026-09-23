@@ -62,6 +62,7 @@ The supplied graph, data-only graph, uniform graph, Track-A L=3 table, and Track
 - Machine-readable results: `experiments/*.jsonl` and summaries
 - Hybrid validation receipt: `experiments/hybrid/official_1m_5seeds_serial.summary.json`
 - Diagnostic figures: `plots/hybrid_errors_by_point.png`, `plots/hybrid_improvement_heatmap.png`, `plots/hybrid_runtime_by_distance.png`, `plots/hybrid_seed_variability.png`
+- Paired uncertainty figure/data: `plots/hybrid_paired_gain.png`, `plots/hybrid_figure_data.csv`, `plots/hybrid_figure_provenance.json`
 - Research-only new architecture: `experiments/tracks/D/`
 - Decision trace: `EXPERIMENT_LOG.md`
 - Environment specification: `pyproject.toml` and `uv.lock`; local virtual environments are ignored by git

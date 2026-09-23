@@ -1,0 +1,10 @@
+{
+  "input_name": "official_1m_5seeds_serial.jsonl",
+  "input_sha256": "9e6159d0caf193f4b7b5b43d54fa48fafafe6ea0f498967d21d9bb698459fee7",
+  "rows": 120,
+  "shots_per_decoder": 120000000,
+  "aggregation": "sum(errors)/sum(shots); no rows excluded; unrounded rates",
+  "uncertainty": "paired fixed-stratum normal 95% intervals, not simultaneous; see paired_effect",
+  "runtime": "maximum construction + decode, sampling excluded, recorded host only",
+  "seed_axis": "categorical, no interpolation"
+}
