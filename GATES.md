@@ -19,6 +19,6 @@
 - [x] G8: Final plots, README, REPORT.md, and EXPERIMENT_LOG.md reflect the approved decoder.
   EVIDENCE: `README.md`, `REPORT.md`, `EXPERIMENT_LOG.md`, `plots/hybrid_*.png`, and `scripts/make_hybrid_plots.py`.
 - [x] G9: Stable approved changes are committed and repository state verified.
-  EVIDENCE: commits `c03dff2` and `391cdf3`; current documentation/plot update pending final commit.
+  EVIDENCE: commits `c03dff2`, `391cdf3`, `1e9478a`, and `82ac0ff`; `git status` clean and `origin/main` at `82ac0ff`.
 - [x] G10: Second agent delivers independently evaluated new architecture without automatically deploying it.
   EVIDENCE: `experiments/tracks/D/analysis.md`: 34 tests/audit pass; candidate remains research-only.
