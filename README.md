@@ -7,14 +7,32 @@ data-only MWPM candidate that preserves the challenge interface.
 
 ## Result at a glance
 
-The final candidate builds its matching graph from the benchmark's actual
-data-qubit-only X-error process instead of the supplied circuit-level
-depolarizing approximation. On the recorded 24-point, 1,000,000-shot benchmark
-with seed 42, it achieved **2,997 errors per million**, compared with **3,025
-errors per million** for the supplied baseline. Five-seed validation at 50,000
-shots per point produced 3,016/M for the candidate versus 3,047/M for the
-baseline. These are small observed reductions, not a claim of a complete
-correlated-noise decoder; see [`REPORT.md`](REPORT.md) for the limitations.
+The deployed candidate combines an offline Gaussian-copula MAP table for `L=3`
+with data-only MWPM fallback for `L=5` and `L=7`. On the official 24-point,
+1,000,000-shot benchmark across five seeds, it achieved **2,992 errors per
+million** (358,992 / 120,000,000), compared with **3,006/M** for the pre-hybrid
+decoder and **3,036/M** for the supplied circuit-level MWPM baseline. There
+were no timeouts. The L=3 table saved 1,690 errors against the pre-hybrid
+decoder; L=5/L=7 predictions remained unchanged. These are observed reductions,
+not a claim of a complete correlated-noise decoder; see [`REPORT.md`](REPORT.md)
+for limitations and the held-out research alternatives.
+
+### Validation figures
+
+The committed figures are generated from the paired five-seed receipt:
+
+![Per-point logical error rates](plots/hybrid_errors_by_point.png)
+
+![Hybrid improvement heatmap](plots/hybrid_improvement_heatmap.png)
+
+![Runtime by distance](plots/hybrid_runtime_by_distance.png)
+
+![Validation-seed variability](plots/hybrid_seed_variability.png)
+
+The direct syndrome-posterior architecture in `experiments/tracks/D/` remains
+research-only. It showed a stronger signal for L=5 than L=7, but was not merged
+because the L=7 evidence is support-limited and the approved deployment is the
+conservative Track-A hybrid.
 
 ## Repository layout
 
@@ -92,6 +110,10 @@ uv run python scripts/run_experiment.py \
 uv run python scripts/make_plots.py \
   --baseline experiments/baseline_50k_validate.jsonl \
   --improved experiments/final_50k_validate.jsonl \
+  --outdir plots
+
+uv run python scripts/make_hybrid_plots.py \
+  --input experiments/hybrid/official_1m_5seeds_serial.jsonl \
   --outdir plots
 ```
 

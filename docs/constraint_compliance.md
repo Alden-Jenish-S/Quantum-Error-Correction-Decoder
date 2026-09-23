@@ -33,6 +33,13 @@ recorded full benchmark had zero timeouts. Re-run the standard benchmark on the
 target machine because performance is hardware and dependency-version
 dependent.
 
+The deployed hybrid was independently checked on 120 point/seed rows at
+1,000,000 shots per point. Maximum build-plus-decode time was approximately
+0.470 seconds for the supplied circuit MWPM, 0.324 seconds for pre-hybrid
+data-only MWPM, and 0.311 seconds for the hybrid. All three had zero timeouts.
+The hybrid L=3 path is a fixed 256-byte lookup; L=5/L=7 retain the existing
+data-only MWPM construction.
+
 ## Reviewer checklist
 
 ```bash

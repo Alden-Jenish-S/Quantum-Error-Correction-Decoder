@@ -62,7 +62,7 @@ network access in `decode()`.
 
 **Not proposed:** Track B graph/hyperedge variants or Track C filters.
 
-The parent will wait for explicit user approval before copying any Track A table
-or hybrid logic into `solve.py`, running the final five-seed validation after the
-change, regenerating public plots, or updating the final report as a deployed
-decoder claim.
+The user approved this hybrid. It is now deployed in `solve.py`; the paired
+five-seed, 1M-shot validation receipt is
+`experiments/hybrid/official_1m_5seeds_serial.summary.json`. Track D remains
+research-only and was not copied into the submission.

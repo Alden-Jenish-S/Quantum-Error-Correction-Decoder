@@ -44,6 +44,13 @@ uv run python scripts/run_experiment.py \
 uv run python scripts/run_experiment.py \
   --decoder final --shots 50000 --validate \
   --output experiments/final_50k_validate.jsonl
+
+uv run python scripts/validate_hybrid.py \
+  --label official_1m_5seeds_serial --compatibility
+
+uv run python scripts/make_hybrid_plots.py \
+  --input experiments/hybrid/official_1m_5seeds_serial.jsonl \
+  --outdir plots
 ```
 
 `baseline` is the supplied circuit-level MWPM implementation. `final` loads the
@@ -63,6 +70,11 @@ rounded seed scores; those two summaries can differ by one error/M. Runtime
 rows measure construction plus decode only, matching the evaluator; end-to-end
 CLI wall time also includes syndrome generation. RSS values are diagnostic
 high-water-mark deltas and are not a portable peak-memory guarantee.
+
+The hybrid receipt compares the supplied circuit MWPM, the retained pre-hybrid
+data-only MWPM, and the deployed hybrid on identical syndrome batches. It
+stores paired rescue/harm counts, per-point regressions, source hashes, and the
+separate unchanged `run.py --validate` compatibility report.
 
 ## Artifact provenance
 

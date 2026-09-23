@@ -22,8 +22,9 @@ Depth: tree 3   Mode: orchestrated
 
 - 2026-09-23 protected `solve.py`; launched three independent tracks in parallel.
 - 2026-09-23 tracks A, B, and C completed; no candidate merged.
-- 2026-09-23 parent trade-off memo written; awaiting explicit user approval.
+- 2026-09-23 parent trade-off memo written; user approved the proposed hybrid.
 - 2026-09-23 user requested two agents, authorizing one to implement the proposed hybrid and another to research new architecture. Stable prior work is committed as d1eef3d; no uncommitted work was present.
+- 2026-09-23 hybrid agent completed full paired five-seed 1M validation; hybrid deployed and committed as c03dff2. New Track D architecture evaluated and committed as research-only 391cdf3.
 
 ## Approved implementation ownership
 
