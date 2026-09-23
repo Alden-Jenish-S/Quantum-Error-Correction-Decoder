@@ -1,0 +1,84 @@
+{
+  "status": "completed",
+  "selected_validation": "official_1m_5seeds_serial.summary.json",
+  "selected_records": "official_1m_5seeds_serial.jsonl",
+  "standard_report": "official_1m_5seeds_serial.standard_validate.txt",
+  "commands": [
+    {
+      "command": "uv run pytest tests/test_submission.py tests/test_hybrid_validation.py",
+      "result": "158 passed in 66.01s"
+    },
+    {
+      "command": "uv run python scripts/validate_hybrid.py --shots 1000 --seeds 42 --label smoke",
+      "result": "passed; 24 point rows, all three variants, source hashes unchanged"
+    },
+    {
+      "command": "uv run pytest",
+      "result": "200 passed in 78.54s"
+    },
+    {
+      "command": "uv run python scripts/validate_hybrid.py --label official_1m_5seeds --compatibility",
+      "result": "completed; one pre-hybrid baseline timeout; all observed counts retained; hybrid and standard compatibility had zero timeouts"
+    },
+    {
+      "command": "uv run python scripts/validate_hybrid.py --label official_1m_5seeds_serial --compatibility",
+      "result": "passed; all three variants had zero timeouts; standard subprocess had zero timeouts; all source hashes unchanged"
+    },
+    {
+      "command": "python run.py --validate --shots 1000000",
+      "execution": "separate subprocess using the uv environment's sys.executable, invoked by each full validation command after paired timing",
+      "result": "both runs: seed scores [2984,2991,2988,3005,2991], mean 2992, timeouts 0/120"
+    },
+    {
+      "command": "git diff --check",
+      "result": "passed"
+    }
+  ],
+  "first_attempt_timing_anomaly": {
+    "receipt": "official_1m_5seeds.summary.json",
+    "seed": 1729,
+    "point": "L7_p0.01_xi10",
+    "variant": "pre_hybrid_data_only",
+    "build_decode_s": 3.461495582945645,
+    "build_s": 2.2821284579113126,
+    "decode_s": 1.1793671250343323,
+    "limit_s": 2.5,
+    "observed_errors": 5681,
+    "scored_errors": 1000000,
+    "cause": "Unconfirmed transient host timing spike; contention is possible but not established. No other Python benchmark/test workload was visible before the serial rerun.",
+    "resolution": "Preserved the first attempt and reran the entire five-seed paired suite plus standard compatibility serially. All raw aggregate counts repeated; no timeouts on rerun."
+  },
+  "seeds": [42,137,256,1729,31415],
+  "shots_per_point": 1000000,
+  "shots_per_decoder": 120000000,
+  "serial_observed_and_scored_errors": {
+    "circuit_mwpm": 364283,
+    "pre_hybrid_data_only": 360682,
+    "hybrid": 358992
+  },
+  "serial_paired_hybrid_vs_reference": {
+    "circuit_mwpm": {"rescue":8890,"harm":3599,"net_saved_errors":5291},
+    "pre_hybrid_data_only": {"rescue":3971,"harm":2281,"net_saved_errors":1690}
+  },
+  "regression_notes": {
+    "pre_hybrid_data_only": "20 improved and 100 tied point-seed rows; zero regressed rows. L5/7 predictions identical; L3 xi0/2 predictions identical.",
+    "circuit_mwpm": "92 improved, 27 tied and one regressed point-seed row. The regression is seed31415,L5,p0.01,xi0: hybrid258 errors versus circuit257 (rescue1,harm2). No five-seed aggregate parameter-point regression versus either reference.",
+    "by_L_p_xi": "Full per-L, per-p, per-xi and all 24 parameter-point summaries, including latency and paired direction, are in the selected summary."
+  },
+  "hybrid_max_build_decode_s_by_L": {
+    "3": 0.027032959042117,
+    "5": 0.20219212514348328,
+    "7": 0.3112855840008706
+  },
+  "paired_wall_s": 131.41353629203513,
+  "standard_wall_s": 87.81062612496316,
+  "total_wall_s": 219.55821100017056,
+  "whole_process_high_water_rss_bytes": 1694089216,
+  "standard_terminated_child_high_water_rss_bytes": 1716158464,
+  "rss_scope": "Normalized bytes; cumulative whole-process high-water RSS includes sampling and all decoders. Child reported separately. Neither value is per-decoder incremental memory.",
+  "solve_bytes": 5506,
+  "solve_sha256_before_and_after": "0ec2b0df26ecd7963bb401fad16d77d8f7ec5d3f0d063e630e40e3e111307df5",
+  "reviewed_frozen_tables_sha256": "debb61816d64cb556cc58c17a3a1a9cf5d0a8c90c08fe3d480d9d931cf29c119",
+  "table_method": "Offline approximate QMC-MAP constants; no exactness claim, no runtime integration or local-file dependency.",
+  "remaining_commands": []
+}

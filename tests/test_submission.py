@@ -1,6 +1,7 @@
 """Submission compatibility, equivalence, and scoped no-I/O regression checks."""
 
 import ast
+import hashlib
 import importlib.util
 from itertools import product
 from pathlib import Path
@@ -15,11 +16,32 @@ import pytest
 import stim
 
 from qec_benchmark.config import challenge_grid
+from qec_benchmark.models import ParameterPoint
 from qec_benchmark.stim_surface_code import SurfaceCodeExperiment
 
 
 SOLVE_PATH = Path(__file__).resolve().parents[1] / "solve.py"
 GRID = challenge_grid()
+FROZEN_PATH = SOLVE_PATH.parent / "experiments/tracks/A/frozen_tables.py"
+FROZEN_SHA256 = "debb61816d64cb556cc58c17a3a1a9cf5d0a8c90c08fe3d480d9d931cf29c119"
+
+
+@pytest.fixture(scope="module")
+def reviewed_tables():
+    source = FROZEN_PATH.read_bytes()
+    assert hashlib.sha256(source).hexdigest() == FROZEN_SHA256
+    # Read the reviewed literals without executing research code.
+    assignment = ast.parse(source).body[1]
+    assert assignment.targets[0].id == "TABLE_HEX"
+    return ast.literal_eval(assignment.value)
+
+
+def _table_predictions(tables, point, syndromes):
+    packed = bytes.fromhex(tables[f"p{point.p:g}_xi{point.xi:g}"])
+    # Independent scalar bit extraction checks both the table and detector order.
+    labels = np.array([(packed[i // 8] >> (i % 8)) & 1 for i in range(256)], dtype=np.uint8)
+    ids = syndromes.astype(np.int64) @ (1 << np.arange(8))
+    return labels[ids]
 
 
 @pytest.fixture(scope="module")
@@ -102,7 +124,7 @@ def test_exact_data_only_circuit(submission, experiments, point):
 @pytest.mark.parametrize("point", GRID, ids=lambda point: point.key())
 @pytest.mark.parametrize("dtype", [np.uint8, np.bool_], ids=["uint8", "bool"])
 def test_predictions_interface_determinism_and_immutability(
-    submission, experiments, diagnostic_syndromes, point, dtype
+    submission, experiments, diagnostic_syndromes, reviewed_tables, point, dtype
 ):
     experiment = experiments[point.L]
     correlated, _ = experiment.sample_correlated(
@@ -110,7 +132,11 @@ def test_predictions_interface_determinism_and_immutability(
     )
     syndromes = np.concatenate([diagnostic_syndromes[point.L], correlated]).astype(dtype)
     before = syndromes.copy()
-    expected = _original_predictions(_original_circuit(experiment, point.p), syndromes)
+    expected = (
+        _table_predictions(reviewed_tables, point, syndromes)
+        if point.L == 3
+        else _original_predictions(_original_circuit(experiment, point.p), syndromes)
+    )
     decoder = submission.build_decoder(point)
 
     predictions = decoder.decode(syndromes)
@@ -128,6 +154,79 @@ def test_predictions_interface_determinism_and_immutability(
         np.testing.assert_array_equal(repeated, predictions)
     np.testing.assert_array_equal(syndromes, before)
     assert not syndromes.flags.writeable
+
+
+@pytest.mark.parametrize("point", GRID[:8], ids=lambda point: point.key())
+def test_all_512_l3_masks_match_reviewed_table(
+    submission, diagnostic_syndromes, reviewed_tables, point
+):
+    syndromes = diagnostic_syndromes[3]
+    assert len(syndromes) == 512
+    expected = _table_predictions(reviewed_tables, point, syndromes)
+    predictions = submission.build_decoder(point).decode(syndromes)
+    np.testing.assert_array_equal(predictions, expected)
+    iid = submission.DataOnlyMWPM(point).decode(syndromes)
+    ids = syndromes.astype(np.int64) @ (1 << np.arange(8))
+    if point.xi in (0, 2):
+        np.testing.assert_array_equal(predictions, iid)
+    else:
+        np.testing.assert_array_equal(predictions != iid, ids == 9)
+        assert np.all(predictions[ids == 9] == 0)
+
+
+def test_table_provenance_and_full256_labels(submission, reviewed_tables):
+    assert len(submission._L3_TABLE_HEX) == len(reviewed_tables) == 8
+    for (p, xi), packed in submission._L3_TABLE_HEX.items():
+        assert packed == reviewed_tables[f"p{p:g}_xi{xi:g}"]
+        decoder = submission.build_decoder(ParameterPoint(3, p, xi))
+        assert decoder._table.shape == (256,)
+        assert decoder._table.dtype == np.uint8
+        assert not decoder._table.flags.writeable
+        assert np.packbits(decoder._table, bitorder="little").tobytes().hex() == packed
+        assert not decoder._table[16:].any()
+
+
+def test_detector_bit_order_and_inactive_mapping(submission, diagnostic_syndromes):
+    syndromes = diagnostic_syndromes[3]
+    assert syndromes.shape == (512, 8)
+    assert not syndromes[:, 4:].any()
+    ids = syndromes.astype(np.int64) @ (1 << np.arange(8))
+    unique, counts = np.unique(ids, return_counts=True)
+    np.testing.assert_array_equal(unique, np.arange(16))
+    np.testing.assert_array_equal(counts, np.full(16, 32))
+    all_bits = ((np.arange(256)[:, None] >> np.arange(8)) & 1).astype(np.uint8)
+    np.testing.assert_array_equal(np.packbits(all_bits, axis=1, bitorder="little")[:, 0], np.arange(256))
+    decoder = submission.build_decoder(ParameterPoint(3, 0.005, 5))
+    # Asymmetric labels distinguish reversed detector bit order.
+    np.testing.assert_array_equal(decoder.decode(all_bits[:16]),
+                                  [0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0])
+    for unreachable in all_bits[16:]:
+        with pytest.raises(ValueError, match="inactive detectors"):
+            decoder.decode(unreachable[None, :])
+    with pytest.raises(ValueError, match="shape"):
+        decoder.decode(np.zeros(8, dtype=np.uint8))
+    with pytest.raises(ValueError, match="shape"):
+        decoder.decode(np.zeros((2, 7), dtype=np.uint8))
+
+
+@pytest.mark.parametrize("p,xi", [
+    (0.0075, 5), (0.005, 1), (0.01, 20), (0.01, -1),
+    (np.nextafter(0.005, 1), 5), (0.01, np.nextafter(5.0, 6.0)),
+])
+def test_off_grid_uses_data_only_without_rounding(submission, diagnostic_syndromes, p, xi):
+    point = ParameterPoint(3, p, xi)
+    decoder = submission.build_decoder(point)
+    assert type(decoder) is submission.DataOnlyMWPM
+    np.testing.assert_array_equal(decoder.decode(diagnostic_syndromes[3]),
+                                  submission.DataOnlyMWPM(point).decode(diagnostic_syndromes[3]))
+
+
+@pytest.mark.parametrize("point", GRID[8:], ids=lambda point: point.key())
+def test_l5_l7_remain_exact_data_only(submission, diagnostic_syndromes, point):
+    decoder = submission.build_decoder(point)
+    assert type(decoder) is submission.DataOnlyMWPM
+    np.testing.assert_array_equal(decoder.decode(diagnostic_syndromes[point.L]),
+                                  submission.DataOnlyMWPM(point).decode(diagnostic_syndromes[point.L]))
 
 
 @pytest.mark.parametrize("point", GRID, ids=lambda point: point.key())

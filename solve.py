@@ -1,10 +1,9 @@
-"""Challenge decoder.
+"""Frozen L=3 QMC-MAP lookup plus data-only MWPM for the challenge.
 
-The benchmark samples data-qubit X errors directly.  The supplied MWPM baseline
-builds its graph from a circuit-level depolarizing model, so this implementation
-uses the matching graph for the same data-only iid model.  It deliberately does
-not attempt to infer ``xi``: the graph remains a fast, robust reference decoder
-for the independent component of the challenge distribution.
+The lookup is an offline, approximate QMC model-integration result, not an exact
+MAP certificate. It is used only at L=3, p in {0.005, 0.01}, xi in {0, 2, 5, 10}.
+Every other parameter point conservatively uses DataOnlyMWPM, which ignores xi;
+there is no interpolation, rounding, or extrapolation of table parameters.
 """
 
 from typing import Protocol
@@ -95,10 +94,52 @@ class DataOnlyMWPM:
         return predictions.astype(np.uint8, copy=False)
 
 
+# Reviewed source: experiments/tracks/A/frozen_tables.py (model-only integration).
+# SHA256: debb61816d64cb556cc58c17a3a1a9cf5d0a8c90c08fe3d480d9d931cf29c119
+# Each hex value packs 256 labels, little-endian within each byte. Only IDs 0..15
+# are physically reachable: detectors 4..7 are inactive for data-only X errors.
+_L3_TABLE_HEX = {
+    (0.005, 0.0): "044b000000000000000000000000000000000000000000000000000000000000",
+    (0.005, 2.0): "044b000000000000000000000000000000000000000000000000000000000000",
+    (0.005, 5.0): "0449000000000000000000000000000000000000000000000000000000000000",
+    (0.005, 10.0): "0449000000000000000000000000000000000000000000000000000000000000",
+    (0.01, 0.0): "044b000000000000000000000000000000000000000000000000000000000000",
+    (0.01, 2.0): "044b000000000000000000000000000000000000000000000000000000000000",
+    (0.01, 5.0): "0449000000000000000000000000000000000000000000000000000000000000",
+    (0.01, 10.0): "0449000000000000000000000000000000000000000000000000000000000000",
+}
+
+
+class _FrozenL3QMC:
+    """Lookup for binary (uint8/bool) eight-detector input in the data-X domain.
+
+    Nonzero inactive detectors are outside the integrated model and rejected;
+    the zero placeholders for unreachable IDs are never used as predictions.
+    """
+
+    def __init__(self, table_hex: str) -> None:
+        self._table = np.unpackbits(
+            np.frombuffer(bytes.fromhex(table_hex), dtype=np.uint8), bitorder="little"
+        )
+        self._table.setflags(write=False)
+
+    def decode(self, syndrome_array: np.ndarray) -> np.ndarray:
+        if syndrome_array.ndim != 2 or syndrome_array.shape[1] != 8:
+            raise ValueError("L=3 syndrome_array must have shape (shots, 8)")
+        ids = np.packbits(syndrome_array, axis=1, bitorder="little")[:, 0]
+        if np.any(ids >= 16):
+            raise ValueError("nonzero inactive detectors are outside the data-X domain")
+        return self._table[ids]
+
+
 def build_decoder(point: _ParameterPoint):
     """Return a decoder for the given parameter point.
 
     Your decoder must implement: decode(syndrome_array: np.ndarray) -> np.ndarray
     where syndrome_array is (shots, num_detectors) uint8 and return is (shots,) uint8.
     """
+    if point.L == 3:
+        table_hex = _L3_TABLE_HEX.get((point.p, point.xi))
+        if table_hex is not None:
+            return _FrozenL3QMC(table_hex)
     return DataOnlyMWPM(point)

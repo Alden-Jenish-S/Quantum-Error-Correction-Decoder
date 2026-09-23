@@ -1,0 +1,13 @@
+
+  QEC Decoder Benchmark (validate: 5 seeds)
+  24 points | 1,000,000 shots | 2.5s limit
+
+  Per-seed scores:
+    seed    42:    2,984 errors/M
+    seed   137:    2,991 errors/M
+    seed   256:    2,988 errors/M
+    seed  1729:    3,005 errors/M
+    seed 31415:    2,991 errors/M
+
+        Score:      2,992 errors per million (mean)
+     Timeouts:    0 / 120
