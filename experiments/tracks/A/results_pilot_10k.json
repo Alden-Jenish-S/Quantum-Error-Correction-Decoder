@@ -1,0 +1,2436 @@
+{
+  "rows": 24,
+  "aggregates": {
+    "L3": {
+      "decoders": {
+        "candidate_a": {
+          "errors": 380,
+          "shots": 80000,
+          "error_rate": 0.00475,
+          "accuracy": 0.99525,
+          "score": 4750,
+          "stratified_normal_ci95": [
+            0.004274134563137855,
+            0.005225865436862145
+          ],
+          "max_build_decode_s": 0.00015974999405443668,
+          "mean_decode_s": 9.072903776541352e-05,
+          "timeouts": 0,
+          "official_scored_errors": 380
+        },
+        "final": {
+          "errors": 390,
+          "shots": 80000,
+          "error_rate": 0.004875,
+          "accuracy": 0.995125,
+          "score": 4875,
+          "stratified_normal_ci95": [
+            0.00439296151937838,
+            0.00535703848062162
+          ],
+          "max_build_decode_s": 0.02379708318039775,
+          "mean_decode_s": 0.00022969787823967636,
+          "timeouts": 0,
+          "official_scored_errors": 390
+        },
+        "baseline": {
+          "errors": 390,
+          "shots": 80000,
+          "error_rate": 0.004875,
+          "accuracy": 0.995125,
+          "score": 4875,
+          "stratified_normal_ci95": [
+            0.00439296151937838,
+            0.00535703848062162
+          ],
+          "max_build_decode_s": 0.022365125128999352,
+          "mean_decode_s": 0.0002659897436387837,
+          "timeouts": 0,
+          "official_scored_errors": 390
+        }
+      },
+      "paired": {
+        "final": {
+          "a_wins": 13,
+          "a_losses": 3,
+          "saved_errors": 10,
+          "saved_error_rate": 0.000125,
+          "paired_se": 4.999835932757387e-05,
+          "paired_normal_ci95": [
+            2.7005016431865637e-05,
+            0.00022299498356813437
+          ],
+          "mcnemar_exact_p": 0.021270751953125,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            2.700367543645938e-05,
+            0.00022299632456354064
+          ]
+        },
+        "baseline": {
+          "a_wins": 13,
+          "a_losses": 3,
+          "saved_errors": 10,
+          "saved_error_rate": 0.000125,
+          "paired_se": 4.999835932757387e-05,
+          "paired_normal_ci95": [
+            2.7005016431865637e-05,
+            0.00022299498356813437
+          ],
+          "mcnemar_exact_p": 0.021270751953125,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            2.700367543645938e-05,
+            0.00022299632456354064
+          ]
+        }
+      }
+    },
+    "full_grid": {
+      "decoders": {
+        "candidate_a": {
+          "errors": 726,
+          "shots": 240000,
+          "error_rate": 0.003025,
+          "accuracy": 0.996975,
+          "score": 3025,
+          "stratified_normal_ci95": [
+            0.002805619497447927,
+            0.0032443805025520727
+          ],
+          "max_build_decode_s": 0.09922129195183516,
+          "mean_decode_s": 0.0005013732200798889,
+          "timeouts": 0,
+          "official_scored_errors": 726
+        },
+        "final": {
+          "errors": 736,
+          "shots": 240000,
+          "error_rate": 0.0030666666666666668,
+          "accuracy": 0.9969333333333333,
+          "score": 3067,
+          "stratified_normal_ci95": [
+            0.0028457937955142522,
+            0.0032875395378190813
+          ],
+          "max_build_decode_s": 0.09308875002898276,
+          "mean_decode_s": 0.0005668818484991789,
+          "timeouts": 0,
+          "official_scored_errors": 736
+        },
+        "baseline": {
+          "errors": 745,
+          "shots": 240000,
+          "error_rate": 0.0031041666666666665,
+          "accuracy": 0.9968958333333333,
+          "score": 3104,
+          "stratified_normal_ci95": [
+            0.0028819466844855956,
+            0.0033263866488477374
+          ],
+          "max_build_decode_s": 0.06252208398655057,
+          "mean_decode_s": 0.000737574688779811,
+          "timeouts": 0,
+          "official_scored_errors": 745
+        }
+      },
+      "paired": {
+        "final": {
+          "a_wins": 13,
+          "a_losses": 3,
+          "saved_errors": 10,
+          "saved_error_rate": 4.1666666666666665e-05,
+          "paired_se": 1.6666484373243523e-05,
+          "paired_normal_ci95": [
+            9.000957546210646e-06,
+            7.433237578712268e-05
+          ],
+          "mcnemar_exact_p": 0.021270751953125,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            9.00122514548646e-06,
+            7.433210818784687e-05
+          ]
+        },
+        "baseline": {
+          "a_wins": 24,
+          "a_losses": 5,
+          "saved_errors": 19,
+          "saved_error_rate": 7.916666666666666e-05,
+          "paired_se": 2.2437651524133505e-05,
+          "paired_normal_ci95": [
+            3.5189677781705955e-05,
+            0.00012314365555162737
+          ],
+          "mcnemar_exact_p": 0.0005461126565933228,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            3.519009579597211e-05,
+            0.0001231432375373612
+          ]
+        }
+      }
+    }
+  },
+  "by_seed": {
+    "8675309": {
+      "L3": {
+        "decoders": {
+          "candidate_a": {
+            "errors": 380,
+            "shots": 80000,
+            "error_rate": 0.00475,
+            "accuracy": 0.99525,
+            "score": 4750,
+            "stratified_normal_ci95": [
+              0.004274134563137855,
+              0.005225865436862145
+            ],
+            "max_build_decode_s": 0.00015974999405443668,
+            "mean_decode_s": 9.072903776541352e-05,
+            "timeouts": 0,
+            "official_scored_errors": 380
+          },
+          "final": {
+            "errors": 390,
+            "shots": 80000,
+            "error_rate": 0.004875,
+            "accuracy": 0.995125,
+            "score": 4875,
+            "stratified_normal_ci95": [
+              0.00439296151937838,
+              0.00535703848062162
+            ],
+            "max_build_decode_s": 0.02379708318039775,
+            "mean_decode_s": 0.00022969787823967636,
+            "timeouts": 0,
+            "official_scored_errors": 390
+          },
+          "baseline": {
+            "errors": 390,
+            "shots": 80000,
+            "error_rate": 0.004875,
+            "accuracy": 0.995125,
+            "score": 4875,
+            "stratified_normal_ci95": [
+              0.00439296151937838,
+              0.00535703848062162
+            ],
+            "max_build_decode_s": 0.022365125128999352,
+            "mean_decode_s": 0.0002659897436387837,
+            "timeouts": 0,
+            "official_scored_errors": 390
+          }
+        },
+        "paired": {
+          "final": {
+            "a_wins": 13,
+            "a_losses": 3,
+            "saved_errors": 10,
+            "saved_error_rate": 0.000125,
+            "paired_se": 4.999835932757387e-05,
+            "paired_normal_ci95": [
+              2.7005016431865637e-05,
+              0.00022299498356813437
+            ],
+            "mcnemar_exact_p": 0.021270751953125,
+            "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+            "stratified_paired_ci95": [
+              2.700367543645938e-05,
+              0.00022299632456354064
+            ]
+          },
+          "baseline": {
+            "a_wins": 13,
+            "a_losses": 3,
+            "saved_errors": 10,
+            "saved_error_rate": 0.000125,
+            "paired_se": 4.999835932757387e-05,
+            "paired_normal_ci95": [
+              2.7005016431865637e-05,
+              0.00022299498356813437
+            ],
+            "mcnemar_exact_p": 0.021270751953125,
+            "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+            "stratified_paired_ci95": [
+              2.700367543645938e-05,
+              0.00022299632456354064
+            ]
+          }
+        }
+      },
+      "full_grid": {
+        "decoders": {
+          "candidate_a": {
+            "errors": 726,
+            "shots": 240000,
+            "error_rate": 0.003025,
+            "accuracy": 0.996975,
+            "score": 3025,
+            "stratified_normal_ci95": [
+              0.002805619497447927,
+              0.0032443805025520727
+            ],
+            "max_build_decode_s": 0.09922129195183516,
+            "mean_decode_s": 0.0005013732200798889,
+            "timeouts": 0,
+            "official_scored_errors": 726
+          },
+          "final": {
+            "errors": 736,
+            "shots": 240000,
+            "error_rate": 0.0030666666666666668,
+            "accuracy": 0.9969333333333333,
+            "score": 3067,
+            "stratified_normal_ci95": [
+              0.0028457937955142522,
+              0.0032875395378190813
+            ],
+            "max_build_decode_s": 0.09308875002898276,
+            "mean_decode_s": 0.0005668818484991789,
+            "timeouts": 0,
+            "official_scored_errors": 736
+          },
+          "baseline": {
+            "errors": 745,
+            "shots": 240000,
+            "error_rate": 0.0031041666666666665,
+            "accuracy": 0.9968958333333333,
+            "score": 3104,
+            "stratified_normal_ci95": [
+              0.0028819466844855956,
+              0.0033263866488477374
+            ],
+            "max_build_decode_s": 0.06252208398655057,
+            "mean_decode_s": 0.000737574688779811,
+            "timeouts": 0,
+            "official_scored_errors": 745
+          }
+        },
+        "paired": {
+          "final": {
+            "a_wins": 13,
+            "a_losses": 3,
+            "saved_errors": 10,
+            "saved_error_rate": 4.1666666666666665e-05,
+            "paired_se": 1.6666484373243523e-05,
+            "paired_normal_ci95": [
+              9.000957546210646e-06,
+              7.433237578712268e-05
+            ],
+            "mcnemar_exact_p": 0.021270751953125,
+            "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+            "stratified_paired_ci95": [
+              9.00122514548646e-06,
+              7.433210818784687e-05
+            ]
+          },
+          "baseline": {
+            "a_wins": 24,
+            "a_losses": 5,
+            "saved_errors": 19,
+            "saved_error_rate": 7.916666666666666e-05,
+            "paired_se": 2.2437651524133505e-05,
+            "paired_normal_ci95": [
+              3.5189677781705955e-05,
+              0.00012314365555162737
+            ],
+            "mcnemar_exact_p": 0.0005461126565933228,
+            "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+            "stratified_paired_ci95": [
+              3.519009579597211e-05,
+              0.0001231432375373612
+            ]
+          }
+        }
+      }
+    }
+  },
+  "by_point": {
+    "L3_p0.005_xi0": {
+      "decoders": {
+        "candidate_a": {
+          "errors": 4,
+          "shots": 10000,
+          "error_rate": 0.0004,
+          "accuracy": 0.9996,
+          "score": 400,
+          "stratified_normal_ci95": [
+            8.078407841568419e-06,
+            0.0007919215921584316
+          ],
+          "max_build_decode_s": 0.00011791707947850227,
+          "mean_decode_s": 8.5500068962574e-05,
+          "timeouts": 0,
+          "official_scored_errors": 4
+        },
+        "final": {
+          "errors": 4,
+          "shots": 10000,
+          "error_rate": 0.0004,
+          "accuracy": 0.9996,
+          "score": 400,
+          "stratified_normal_ci95": [
+            8.078407841568419e-06,
+            0.0007919215921584316
+          ],
+          "max_build_decode_s": 0.02379708318039775,
+          "mean_decode_s": 0.000341000035405159,
+          "timeouts": 0,
+          "official_scored_errors": 4
+        },
+        "baseline": {
+          "errors": 4,
+          "shots": 10000,
+          "error_rate": 0.0004,
+          "accuracy": 0.9996,
+          "score": 400,
+          "stratified_normal_ci95": [
+            8.078407841568419e-06,
+            0.0007919215921584316
+          ],
+          "max_build_decode_s": 0.017545041861012578,
+          "mean_decode_s": 0.00024783285334706306,
+          "timeouts": 0,
+          "official_scored_errors": 4
+        }
+      },
+      "paired": {
+        "final": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_holm_p_8points": 1.0
+        },
+        "baseline": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_holm_p_8points": 1.0
+        }
+      }
+    },
+    "L3_p0.005_xi2": {
+      "decoders": {
+        "candidate_a": {
+          "errors": 18,
+          "shots": 10000,
+          "error_rate": 0.0018,
+          "accuracy": 0.9982,
+          "score": 1800,
+          "stratified_normal_ci95": [
+            0.0009691911642260898,
+            0.0026308088357739103
+          ],
+          "max_build_decode_s": 0.00011879182420670986,
+          "mean_decode_s": 8.995784446597099e-05,
+          "timeouts": 0,
+          "official_scored_errors": 18
+        },
+        "final": {
+          "errors": 18,
+          "shots": 10000,
+          "error_rate": 0.0018,
+          "accuracy": 0.9982,
+          "score": 1800,
+          "stratified_normal_ci95": [
+            0.0009691911642260898,
+            0.0026308088357739103
+          ],
+          "max_build_decode_s": 0.02252829191274941,
+          "mean_decode_s": 0.0002109999768435955,
+          "timeouts": 0,
+          "official_scored_errors": 18
+        },
+        "baseline": {
+          "errors": 18,
+          "shots": 10000,
+          "error_rate": 0.0018,
+          "accuracy": 0.9982,
+          "score": 1800,
+          "stratified_normal_ci95": [
+            0.0009691911642260898,
+            0.0026308088357739103
+          ],
+          "max_build_decode_s": 0.017437583999708295,
+          "mean_decode_s": 0.0002049170434474945,
+          "timeouts": 0,
+          "official_scored_errors": 18
+        }
+      },
+      "paired": {
+        "final": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_holm_p_8points": 1.0
+        },
+        "baseline": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_holm_p_8points": 1.0
+        }
+      }
+    },
+    "L3_p0.005_xi5": {
+      "decoders": {
+        "candidate_a": {
+          "errors": 43,
+          "shots": 10000,
+          "error_rate": 0.0043,
+          "accuracy": 0.9957,
+          "score": 4300,
+          "stratified_normal_ci95": [
+            0.003017508330787291,
+            0.005582491669212709
+          ],
+          "max_build_decode_s": 0.00010024989023804665,
+          "mean_decode_s": 8.537503890693188e-05,
+          "timeouts": 0,
+          "official_scored_errors": 43
+        },
+        "final": {
+          "errors": 44,
+          "shots": 10000,
+          "error_rate": 0.0044,
+          "accuracy": 0.9956,
+          "score": 4400,
+          "stratified_normal_ci95": [
+            0.0031027464926237434,
+            0.005697253507376257
+          ],
+          "max_build_decode_s": 0.022110125049948692,
+          "mean_decode_s": 0.00017274986021220684,
+          "timeouts": 0,
+          "official_scored_errors": 44
+        },
+        "baseline": {
+          "errors": 44,
+          "shots": 10000,
+          "error_rate": 0.0044,
+          "accuracy": 0.9956,
+          "score": 4400,
+          "stratified_normal_ci95": [
+            0.0031027464926237434,
+            0.005697253507376257
+          ],
+          "max_build_decode_s": 0.01892912480980158,
+          "mean_decode_s": 0.000520374858751893,
+          "timeouts": 0,
+          "official_scored_errors": 44
+        }
+      },
+      "paired": {
+        "final": {
+          "a_wins": 1,
+          "a_losses": 0,
+          "saved_errors": 1,
+          "saved_error_rate": 0.0001,
+          "paired_se": 0.0001,
+          "paired_normal_ci95": [
+            -9.599639845400003e-05,
+            0.000295996398454
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            -9.599999999999999e-05,
+            0.000296
+          ],
+          "mcnemar_holm_p_8points": 1.0
+        },
+        "baseline": {
+          "a_wins": 1,
+          "a_losses": 0,
+          "saved_errors": 1,
+          "saved_error_rate": 0.0001,
+          "paired_se": 0.0001,
+          "paired_normal_ci95": [
+            -9.599639845400003e-05,
+            0.000295996398454
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            -9.599999999999999e-05,
+            0.000296
+          ],
+          "mcnemar_holm_p_8points": 1.0
+        }
+      }
+    },
+    "L3_p0.005_xi10": {
+      "decoders": {
+        "candidate_a": {
+          "errors": 45,
+          "shots": 10000,
+          "error_rate": 0.0045,
+          "accuracy": 0.9955,
+          "score": 4500,
+          "stratified_normal_ci95": [
+            0.003188153682781401,
+            0.0058118463172185985
+          ],
+          "max_build_decode_s": 0.00012420793063938618,
+          "mean_decode_s": 9.287497960031033e-05,
+          "timeouts": 0,
+          "official_scored_errors": 45
+        },
+        "final": {
+          "errors": 48,
+          "shots": 10000,
+          "error_rate": 0.0048,
+          "accuracy": 0.9952,
+          "score": 4800,
+          "stratified_normal_ci95": [
+            0.003445335113911931,
+            0.006154664886088068
+          ],
+          "max_build_decode_s": 0.023247916949912906,
+          "mean_decode_s": 0.00021150009706616402,
+          "timeouts": 0,
+          "official_scored_errors": 48
+        },
+        "baseline": {
+          "errors": 48,
+          "shots": 10000,
+          "error_rate": 0.0048,
+          "accuracy": 0.9952,
+          "score": 4800,
+          "stratified_normal_ci95": [
+            0.003445335113911931,
+            0.006154664886088068
+          ],
+          "max_build_decode_s": 0.022365125128999352,
+          "mean_decode_s": 0.00018195807933807373,
+          "timeouts": 0,
+          "official_scored_errors": 48
+        }
+      },
+      "paired": {
+        "final": {
+          "a_wins": 3,
+          "a_losses": 0,
+          "saved_errors": 3,
+          "saved_error_rate": 0.0003,
+          "paired_se": 0.00017318775765030273,
+          "paired_normal_ci95": [
+            -3.944176755783525e-05,
+            0.0006394417675578351
+          ],
+          "mcnemar_exact_p": 0.25,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            -3.944800499459337e-05,
+            0.0006394480049945933
+          ],
+          "mcnemar_holm_p_8points": 1.0
+        },
+        "baseline": {
+          "a_wins": 3,
+          "a_losses": 0,
+          "saved_errors": 3,
+          "saved_error_rate": 0.0003,
+          "paired_se": 0.00017318775765030273,
+          "paired_normal_ci95": [
+            -3.944176755783525e-05,
+            0.0006394417675578351
+          ],
+          "mcnemar_exact_p": 0.25,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            -3.944800499459337e-05,
+            0.0006394480049945933
+          ],
+          "mcnemar_holm_p_8points": 1.0
+        }
+      }
+    },
+    "L3_p0.01_xi0": {
+      "decoders": {
+        "candidate_a": {
+          "errors": 13,
+          "shots": 10000,
+          "error_rate": 0.0013,
+          "accuracy": 0.9987,
+          "score": 1300,
+          "stratified_normal_ci95": [
+            0.0005937714466265187,
+            0.0020062285533734812
+          ],
+          "max_build_decode_s": 0.00010874983854591846,
+          "mean_decode_s": 9.620795026421547e-05,
+          "timeouts": 0,
+          "official_scored_errors": 13
+        },
+        "final": {
+          "errors": 13,
+          "shots": 10000,
+          "error_rate": 0.0013,
+          "accuracy": 0.9987,
+          "score": 1300,
+          "stratified_normal_ci95": [
+            0.0005937714466265187,
+            0.0020062285533734812
+          ],
+          "max_build_decode_s": 0.02275695907883346,
+          "mean_decode_s": 0.0002490000333636999,
+          "timeouts": 0,
+          "official_scored_errors": 13
+        },
+        "baseline": {
+          "errors": 13,
+          "shots": 10000,
+          "error_rate": 0.0013,
+          "accuracy": 0.9987,
+          "score": 1300,
+          "stratified_normal_ci95": [
+            0.0005937714466265187,
+            0.0020062285533734812
+          ],
+          "max_build_decode_s": 0.01738579198718071,
+          "mean_decode_s": 0.00027562491595745087,
+          "timeouts": 0,
+          "official_scored_errors": 13
+        }
+      },
+      "paired": {
+        "final": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_holm_p_8points": 1.0
+        },
+        "baseline": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_holm_p_8points": 1.0
+        }
+      }
+    },
+    "L3_p0.01_xi2": {
+      "decoders": {
+        "candidate_a": {
+          "errors": 73,
+          "shots": 10000,
+          "error_rate": 0.0073,
+          "accuracy": 0.9927,
+          "score": 7300,
+          "stratified_normal_ci95": [
+            0.0056314988421939886,
+            0.008968501157806012
+          ],
+          "max_build_decode_s": 0.00010566599667072296,
+          "mean_decode_s": 8.445815183222294e-05,
+          "timeouts": 0,
+          "official_scored_errors": 73
+        },
+        "final": {
+          "errors": 73,
+          "shots": 10000,
+          "error_rate": 0.0073,
+          "accuracy": 0.9927,
+          "score": 7300,
+          "stratified_normal_ci95": [
+            0.0056314988421939886,
+            0.008968501157806012
+          ],
+          "max_build_decode_s": 0.023299833992496133,
+          "mean_decode_s": 0.00022816704586148262,
+          "timeouts": 0,
+          "official_scored_errors": 73
+        },
+        "baseline": {
+          "errors": 73,
+          "shots": 10000,
+          "error_rate": 0.0073,
+          "accuracy": 0.9927,
+          "score": 7300,
+          "stratified_normal_ci95": [
+            0.0056314988421939886,
+            0.008968501157806012
+          ],
+          "max_build_decode_s": 0.017930584028363228,
+          "mean_decode_s": 0.00024358415976166725,
+          "timeouts": 0,
+          "official_scored_errors": 73
+        }
+      },
+      "paired": {
+        "final": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_holm_p_8points": 1.0
+        },
+        "baseline": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_holm_p_8points": 1.0
+        }
+      }
+    },
+    "L3_p0.01_xi5": {
+      "decoders": {
+        "candidate_a": {
+          "errors": 72,
+          "shots": 10000,
+          "error_rate": 0.0072,
+          "accuracy": 0.9928,
+          "score": 7200,
+          "stratified_normal_ci95": [
+            0.005542882881145693,
+            0.008857117118854308
+          ],
+          "max_build_decode_s": 0.00010200007818639278,
+          "mean_decode_s": 8.766609244048595e-05,
+          "timeouts": 0,
+          "official_scored_errors": 72
+        },
+        "final": {
+          "errors": 75,
+          "shots": 10000,
+          "error_rate": 0.0075,
+          "accuracy": 0.9925,
+          "score": 7500,
+          "stratified_normal_ci95": [
+            0.005808967475179735,
+            0.009191032524820265
+          ],
+          "max_build_decode_s": 0.022563083097338676,
+          "mean_decode_s": 0.00021958304569125175,
+          "timeouts": 0,
+          "official_scored_errors": 75
+        },
+        "baseline": {
+          "errors": 75,
+          "shots": 10000,
+          "error_rate": 0.0075,
+          "accuracy": 0.9925,
+          "score": 7500,
+          "stratified_normal_ci95": [
+            0.005808967475179735,
+            0.009191032524820265
+          ],
+          "max_build_decode_s": 0.018187292153015733,
+          "mean_decode_s": 0.00023229210637509823,
+          "timeouts": 0,
+          "official_scored_errors": 75
+        }
+      },
+      "paired": {
+        "final": {
+          "a_wins": 3,
+          "a_losses": 0,
+          "saved_errors": 3,
+          "saved_error_rate": 0.0003,
+          "paired_se": 0.00017318775765030273,
+          "paired_normal_ci95": [
+            -3.944176755783525e-05,
+            0.0006394417675578351
+          ],
+          "mcnemar_exact_p": 0.25,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            -3.944800499459337e-05,
+            0.0006394480049945933
+          ],
+          "mcnemar_holm_p_8points": 1.0
+        },
+        "baseline": {
+          "a_wins": 3,
+          "a_losses": 0,
+          "saved_errors": 3,
+          "saved_error_rate": 0.0003,
+          "paired_se": 0.00017318775765030273,
+          "paired_normal_ci95": [
+            -3.944176755783525e-05,
+            0.0006394417675578351
+          ],
+          "mcnemar_exact_p": 0.25,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            -3.944800499459337e-05,
+            0.0006394480049945933
+          ],
+          "mcnemar_holm_p_8points": 1.0
+        }
+      }
+    },
+    "L3_p0.01_xi10": {
+      "decoders": {
+        "candidate_a": {
+          "errors": 112,
+          "shots": 10000,
+          "error_rate": 0.0112,
+          "accuracy": 0.9888,
+          "score": 11200,
+          "stratified_normal_ci95": [
+            0.009137379586642274,
+            0.013262620413357726
+          ],
+          "max_build_decode_s": 0.00015974999405443668,
+          "mean_decode_s": 0.00010379217565059662,
+          "timeouts": 0,
+          "official_scored_errors": 112
+        },
+        "final": {
+          "errors": 115,
+          "shots": 10000,
+          "error_rate": 0.0115,
+          "accuracy": 0.9885,
+          "score": 11500,
+          "stratified_normal_ci95": [
+            0.009410254838503029,
+            0.01358974516149697
+          ],
+          "max_build_decode_s": 0.022977625019848347,
+          "mean_decode_s": 0.0002045829314738512,
+          "timeouts": 0,
+          "official_scored_errors": 115
+        },
+        "baseline": {
+          "errors": 115,
+          "shots": 10000,
+          "error_rate": 0.0115,
+          "accuracy": 0.9885,
+          "score": 11500,
+          "stratified_normal_ci95": [
+            0.009410254838503029,
+            0.01358974516149697
+          ],
+          "max_build_decode_s": 0.017703334102407098,
+          "mean_decode_s": 0.00022133393213152885,
+          "timeouts": 0,
+          "official_scored_errors": 115
+        }
+      },
+      "paired": {
+        "final": {
+          "a_wins": 6,
+          "a_losses": 3,
+          "saved_errors": 3,
+          "saved_error_rate": 0.0003,
+          "paired_se": 0.0003,
+          "paired_normal_ci95": [
+            -0.00028798919536199996,
+            0.0008879891953619999
+          ],
+          "mcnemar_exact_p": 0.5078125,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            -0.000288,
+            0.0008879999999999999
+          ],
+          "mcnemar_holm_p_8points": 1.0
+        },
+        "baseline": {
+          "a_wins": 6,
+          "a_losses": 3,
+          "saved_errors": 3,
+          "saved_error_rate": 0.0003,
+          "paired_se": 0.0003,
+          "paired_normal_ci95": [
+            -0.00028798919536199996,
+            0.0008879891953619999
+          ],
+          "mcnemar_exact_p": 0.5078125,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            -0.000288,
+            0.0008879999999999999
+          ],
+          "mcnemar_holm_p_8points": 1.0
+        }
+      }
+    },
+    "L5_p0.005_xi0": {
+      "decoders": {
+        "candidate_a": {
+          "errors": 2,
+          "shots": 10000,
+          "error_rate": 0.0002,
+          "accuracy": 0.9998,
+          "score": 200,
+          "stratified_normal_ci95": [
+            -7.715813825323622e-05,
+            0.0004771581382532362
+          ],
+          "max_build_decode_s": 0.05147554096765816,
+          "mean_decode_s": 0.0004331250675022602,
+          "timeouts": 0,
+          "official_scored_errors": 2
+        },
+        "final": {
+          "errors": 2,
+          "shots": 10000,
+          "error_rate": 0.0002,
+          "accuracy": 0.9998,
+          "score": 200,
+          "stratified_normal_ci95": [
+            -7.715813825323622e-05,
+            0.0004771581382532362
+          ],
+          "max_build_decode_s": 0.049346207873895764,
+          "mean_decode_s": 0.0003775828517973423,
+          "timeouts": 0,
+          "official_scored_errors": 2
+        },
+        "baseline": {
+          "errors": 2,
+          "shots": 10000,
+          "error_rate": 0.0002,
+          "accuracy": 0.9998,
+          "score": 200,
+          "stratified_normal_ci95": [
+            -7.715813825323622e-05,
+            0.0004771581382532362
+          ],
+          "max_build_decode_s": 0.03306779102422297,
+          "mean_decode_s": 0.0004838330205529928,
+          "timeouts": 0,
+          "official_scored_errors": 2
+        }
+      },
+      "paired": {
+        "final": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "baseline": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "L5_p0.005_xi2": {
+      "decoders": {
+        "candidate_a": {
+          "errors": 3,
+          "shots": 10000,
+          "error_rate": 0.0003,
+          "accuracy": 0.9997,
+          "score": 300,
+          "stratified_normal_ci95": [
+            -3.943103217001246e-05,
+            0.0006394310321700124
+          ],
+          "max_build_decode_s": 0.047649041982367635,
+          "mean_decode_s": 0.0003747090231627226,
+          "timeouts": 0,
+          "official_scored_errors": 3
+        },
+        "final": {
+          "errors": 3,
+          "shots": 10000,
+          "error_rate": 0.0003,
+          "accuracy": 0.9997,
+          "score": 300,
+          "stratified_normal_ci95": [
+            -3.943103217001246e-05,
+            0.0006394310321700124
+          ],
+          "max_build_decode_s": 0.05083995801396668,
+          "mean_decode_s": 0.0003923329059034586,
+          "timeouts": 0,
+          "official_scored_errors": 3
+        },
+        "baseline": {
+          "errors": 3,
+          "shots": 10000,
+          "error_rate": 0.0003,
+          "accuracy": 0.9997,
+          "score": 300,
+          "stratified_normal_ci95": [
+            -3.943103217001246e-05,
+            0.0006394310321700124
+          ],
+          "max_build_decode_s": 0.03533604205586016,
+          "mean_decode_s": 0.0004664170555770397,
+          "timeouts": 0,
+          "official_scored_errors": 3
+        }
+      },
+      "paired": {
+        "final": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "baseline": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "L5_p0.005_xi5": {
+      "decoders": {
+        "candidate_a": {
+          "errors": 16,
+          "shots": 10000,
+          "error_rate": 0.0016,
+          "accuracy": 0.9984,
+          "score": 1600,
+          "stratified_normal_ci95": [
+            0.0008166274510809049,
+            0.002383372548919095
+          ],
+          "max_build_decode_s": 0.0475032078102231,
+          "mean_decode_s": 0.00039216596633195877,
+          "timeouts": 0,
+          "official_scored_errors": 16
+        },
+        "final": {
+          "errors": 16,
+          "shots": 10000,
+          "error_rate": 0.0016,
+          "accuracy": 0.9984,
+          "score": 1600,
+          "stratified_normal_ci95": [
+            0.0008166274510809049,
+            0.002383372548919095
+          ],
+          "max_build_decode_s": 0.04778458294458687,
+          "mean_decode_s": 0.0003839170094579458,
+          "timeouts": 0,
+          "official_scored_errors": 16
+        },
+        "baseline": {
+          "errors": 16,
+          "shots": 10000,
+          "error_rate": 0.0016,
+          "accuracy": 0.9984,
+          "score": 1600,
+          "stratified_normal_ci95": [
+            0.0008166274510809049,
+            0.002383372548919095
+          ],
+          "max_build_decode_s": 0.03369224979542196,
+          "mean_decode_s": 0.0005216668359935284,
+          "timeouts": 0,
+          "official_scored_errors": 16
+        }
+      },
+      "paired": {
+        "final": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "baseline": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "L5_p0.005_xi10": {
+      "decoders": {
+        "candidate_a": {
+          "errors": 27,
+          "shots": 10000,
+          "error_rate": 0.0027,
+          "accuracy": 0.9973,
+          "score": 2700,
+          "stratified_normal_ci95": [
+            0.0016829299563943495,
+            0.0037170700436056506
+          ],
+          "max_build_decode_s": 0.049257291946560144,
+          "mean_decode_s": 0.00033974996767938137,
+          "timeouts": 0,
+          "official_scored_errors": 27
+        },
+        "final": {
+          "errors": 27,
+          "shots": 10000,
+          "error_rate": 0.0027,
+          "accuracy": 0.9973,
+          "score": 2700,
+          "stratified_normal_ci95": [
+            0.0016829299563943495,
+            0.0037170700436056506
+          ],
+          "max_build_decode_s": 0.05074062501080334,
+          "mean_decode_s": 0.0003638749476522207,
+          "timeouts": 0,
+          "official_scored_errors": 27
+        },
+        "baseline": {
+          "errors": 27,
+          "shots": 10000,
+          "error_rate": 0.0027,
+          "accuracy": 0.9973,
+          "score": 2700,
+          "stratified_normal_ci95": [
+            0.0016829299563943495,
+            0.0037170700436056506
+          ],
+          "max_build_decode_s": 0.035881999880075455,
+          "mean_decode_s": 0.00045012496411800385,
+          "timeouts": 0,
+          "official_scored_errors": 27
+        }
+      },
+      "paired": {
+        "final": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "baseline": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "L5_p0.01_xi0": {
+      "decoders": {
+        "candidate_a": {
+          "errors": 1,
+          "shots": 10000,
+          "error_rate": 0.0001,
+          "accuracy": 0.9999,
+          "score": 100,
+          "stratified_normal_ci95": [
+            -9.599019975498775e-05,
+            0.00029599019975498777
+          ],
+          "max_build_decode_s": 0.04842616687528789,
+          "mean_decode_s": 0.000596500001847744,
+          "timeouts": 0,
+          "official_scored_errors": 1
+        },
+        "final": {
+          "errors": 1,
+          "shots": 10000,
+          "error_rate": 0.0001,
+          "accuracy": 0.9999,
+          "score": 100,
+          "stratified_normal_ci95": [
+            -9.599019975498775e-05,
+            0.00029599019975498777
+          ],
+          "max_build_decode_s": 0.05033370805904269,
+          "mean_decode_s": 0.000611916184425354,
+          "timeouts": 0,
+          "official_scored_errors": 1
+        },
+        "baseline": {
+          "errors": 1,
+          "shots": 10000,
+          "error_rate": 0.0001,
+          "accuracy": 0.9999,
+          "score": 100,
+          "stratified_normal_ci95": [
+            -9.599019975498775e-05,
+            0.00029599019975498777
+          ],
+          "max_build_decode_s": 0.03655991703271866,
+          "mean_decode_s": 0.0007249580230563879,
+          "timeouts": 0,
+          "official_scored_errors": 1
+        }
+      },
+      "paired": {
+        "final": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "baseline": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "L5_p0.01_xi2": {
+      "decoders": {
+        "candidate_a": {
+          "errors": 18,
+          "shots": 10000,
+          "error_rate": 0.0018,
+          "accuracy": 0.9982,
+          "score": 1800,
+          "stratified_normal_ci95": [
+            0.0009691911642260898,
+            0.0026308088357739103
+          ],
+          "max_build_decode_s": 0.04930149996653199,
+          "mean_decode_s": 0.0005740409251302481,
+          "timeouts": 0,
+          "official_scored_errors": 18
+        },
+        "final": {
+          "errors": 18,
+          "shots": 10000,
+          "error_rate": 0.0018,
+          "accuracy": 0.9982,
+          "score": 1800,
+          "stratified_normal_ci95": [
+            0.0009691911642260898,
+            0.0026308088357739103
+          ],
+          "max_build_decode_s": 0.049375707982108,
+          "mean_decode_s": 0.0005738749168813229,
+          "timeouts": 0,
+          "official_scored_errors": 18
+        },
+        "baseline": {
+          "errors": 18,
+          "shots": 10000,
+          "error_rate": 0.0018,
+          "accuracy": 0.9982,
+          "score": 1800,
+          "stratified_normal_ci95": [
+            0.0009691911642260898,
+            0.0026308088357739103
+          ],
+          "max_build_decode_s": 0.03556391689926386,
+          "mean_decode_s": 0.0007140419911593199,
+          "timeouts": 0,
+          "official_scored_errors": 18
+        }
+      },
+      "paired": {
+        "final": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "baseline": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "L5_p0.01_xi5": {
+      "decoders": {
+        "candidate_a": {
+          "errors": 57,
+          "shots": 10000,
+          "error_rate": 0.0057,
+          "accuracy": 0.9943,
+          "score": 5700,
+          "stratified_normal_ci95": [
+            0.004224455815097359,
+            0.007175544184902642
+          ],
+          "max_build_decode_s": 0.050176875200122595,
+          "mean_decode_s": 0.0005592501256614923,
+          "timeouts": 0,
+          "official_scored_errors": 57
+        },
+        "final": {
+          "errors": 57,
+          "shots": 10000,
+          "error_rate": 0.0057,
+          "accuracy": 0.9943,
+          "score": 5700,
+          "stratified_normal_ci95": [
+            0.004224455815097359,
+            0.007175544184902642
+          ],
+          "max_build_decode_s": 0.051319750025868416,
+          "mean_decode_s": 0.0005989582277834415,
+          "timeouts": 0,
+          "official_scored_errors": 57
+        },
+        "baseline": {
+          "errors": 57,
+          "shots": 10000,
+          "error_rate": 0.0057,
+          "accuracy": 0.9943,
+          "score": 5700,
+          "stratified_normal_ci95": [
+            0.004224455815097359,
+            0.007175544184902642
+          ],
+          "max_build_decode_s": 0.03528716694563627,
+          "mean_decode_s": 0.0008050000760704279,
+          "timeouts": 0,
+          "official_scored_errors": 57
+        }
+      },
+      "paired": {
+        "final": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "baseline": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "L5_p0.01_xi10": {
+      "decoders": {
+        "candidate_a": {
+          "errors": 81,
+          "shots": 10000,
+          "error_rate": 0.0081,
+          "accuracy": 0.9919,
+          "score": 8100,
+          "stratified_normal_ci95": [
+            0.006343158725894681,
+            0.009856841274105318
+          ],
+          "max_build_decode_s": 0.05040145805105567,
+          "mean_decode_s": 0.0005350830033421516,
+          "timeouts": 0,
+          "official_scored_errors": 81
+        },
+        "final": {
+          "errors": 81,
+          "shots": 10000,
+          "error_rate": 0.0081,
+          "accuracy": 0.9919,
+          "score": 8100,
+          "stratified_normal_ci95": [
+            0.006343158725894681,
+            0.009856841274105318
+          ],
+          "max_build_decode_s": 0.04859104100614786,
+          "mean_decode_s": 0.0004945830442011356,
+          "timeouts": 0,
+          "official_scored_errors": 81
+        },
+        "baseline": {
+          "errors": 81,
+          "shots": 10000,
+          "error_rate": 0.0081,
+          "accuracy": 0.9919,
+          "score": 8100,
+          "stratified_normal_ci95": [
+            0.006343158725894681,
+            0.009856841274105318
+          ],
+          "max_build_decode_s": 0.03391754115000367,
+          "mean_decode_s": 0.0006202911026775837,
+          "timeouts": 0,
+          "official_scored_errors": 81
+        }
+      },
+      "paired": {
+        "final": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "baseline": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "L7_p0.005_xi0": {
+      "decoders": {
+        "candidate_a": {
+          "errors": 0,
+          "shots": 10000,
+          "error_rate": 0.0,
+          "accuracy": 1.0,
+          "score": 0,
+          "stratified_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "max_build_decode_s": 0.08912391704507172,
+          "mean_decode_s": 0.0006902089808136225,
+          "timeouts": 0,
+          "official_scored_errors": 0
+        },
+        "final": {
+          "errors": 0,
+          "shots": 10000,
+          "error_rate": 0.0,
+          "accuracy": 1.0,
+          "score": 0,
+          "stratified_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "max_build_decode_s": 0.09308875002898276,
+          "mean_decode_s": 0.0006880001164972782,
+          "timeouts": 0,
+          "official_scored_errors": 0
+        },
+        "baseline": {
+          "errors": 1,
+          "shots": 10000,
+          "error_rate": 0.0001,
+          "accuracy": 0.9999,
+          "score": 100,
+          "stratified_normal_ci95": [
+            -9.599019975498775e-05,
+            0.00029599019975498777
+          ],
+          "max_build_decode_s": 0.06142349983565509,
+          "mean_decode_s": 0.0011636668350547552,
+          "timeouts": 0,
+          "official_scored_errors": 1
+        }
+      },
+      "paired": {
+        "final": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "baseline": {
+          "a_wins": 1,
+          "a_losses": 0,
+          "saved_errors": 1,
+          "saved_error_rate": 0.0001,
+          "paired_se": 0.0001,
+          "paired_normal_ci95": [
+            -9.599639845400003e-05,
+            0.000295996398454
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            -9.599999999999999e-05,
+            0.000296
+          ]
+        }
+      }
+    },
+    "L7_p0.005_xi2": {
+      "decoders": {
+        "candidate_a": {
+          "errors": 1,
+          "shots": 10000,
+          "error_rate": 0.0001,
+          "accuracy": 0.9999,
+          "score": 100,
+          "stratified_normal_ci95": [
+            -9.599019975498775e-05,
+            0.00029599019975498777
+          ],
+          "max_build_decode_s": 0.09012575005181134,
+          "mean_decode_s": 0.0007139591034501791,
+          "timeouts": 0,
+          "official_scored_errors": 1
+        },
+        "final": {
+          "errors": 1,
+          "shots": 10000,
+          "error_rate": 0.0001,
+          "accuracy": 0.9999,
+          "score": 100,
+          "stratified_normal_ci95": [
+            -9.599019975498775e-05,
+            0.00029599019975498777
+          ],
+          "max_build_decode_s": 0.09162545809522271,
+          "mean_decode_s": 0.0006897079292684793,
+          "timeouts": 0,
+          "official_scored_errors": 1
+        },
+        "baseline": {
+          "errors": 1,
+          "shots": 10000,
+          "error_rate": 0.0001,
+          "accuracy": 0.9999,
+          "score": 100,
+          "stratified_normal_ci95": [
+            -9.599019975498775e-05,
+            0.00029599019975498777
+          ],
+          "max_build_decode_s": 0.06252208398655057,
+          "mean_decode_s": 0.0010145839769393206,
+          "timeouts": 0,
+          "official_scored_errors": 1
+        }
+      },
+      "paired": {
+        "final": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "baseline": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "L7_p0.005_xi5": {
+      "decoders": {
+        "candidate_a": {
+          "errors": 12,
+          "shots": 10000,
+          "error_rate": 0.0012,
+          "accuracy": 0.9988,
+          "score": 1200,
+          "stratified_normal_ci95": [
+            0.0005214435840698284,
+            0.0018785564159301714
+          ],
+          "max_build_decode_s": 0.09346329187974334,
+          "mean_decode_s": 0.0008059588726609945,
+          "timeouts": 0,
+          "official_scored_errors": 12
+        },
+        "final": {
+          "errors": 12,
+          "shots": 10000,
+          "error_rate": 0.0012,
+          "accuracy": 0.9988,
+          "score": 1200,
+          "stratified_normal_ci95": [
+            0.0005214435840698284,
+            0.0018785564159301714
+          ],
+          "max_build_decode_s": 0.08857304183766246,
+          "mean_decode_s": 0.0007096249610185623,
+          "timeouts": 0,
+          "official_scored_errors": 12
+        },
+        "baseline": {
+          "errors": 12,
+          "shots": 10000,
+          "error_rate": 0.0012,
+          "accuracy": 0.9988,
+          "score": 1200,
+          "stratified_normal_ci95": [
+            0.0005214435840698284,
+            0.0018785564159301714
+          ],
+          "max_build_decode_s": 0.05824362486600876,
+          "mean_decode_s": 0.0010341249871999025,
+          "timeouts": 0,
+          "official_scored_errors": 12
+        }
+      },
+      "paired": {
+        "final": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "baseline": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "L7_p0.005_xi10": {
+      "decoders": {
+        "candidate_a": {
+          "errors": 28,
+          "shots": 10000,
+          "error_rate": 0.0028,
+          "accuracy": 0.9972,
+          "score": 2800,
+          "stratified_normal_ci95": [
+            0.00176431849219946,
+            0.00383568150780054
+          ],
+          "max_build_decode_s": 0.09922129195183516,
+          "mean_decode_s": 0.0007402498740702868,
+          "timeouts": 0,
+          "official_scored_errors": 28
+        },
+        "final": {
+          "errors": 28,
+          "shots": 10000,
+          "error_rate": 0.0028,
+          "accuracy": 0.9972,
+          "score": 2800,
+          "stratified_normal_ci95": [
+            0.00176431849219946,
+            0.00383568150780054
+          ],
+          "max_build_decode_s": 0.0910737921949476,
+          "mean_decode_s": 0.0007118750363588333,
+          "timeouts": 0,
+          "official_scored_errors": 28
+        },
+        "baseline": {
+          "errors": 29,
+          "shots": 10000,
+          "error_rate": 0.0029,
+          "accuracy": 0.9971,
+          "score": 2900,
+          "stratified_normal_ci95": [
+            0.0018460392728379296,
+            0.0039539607271620696
+          ],
+          "max_build_decode_s": 0.06021966598927975,
+          "mean_decode_s": 0.0010521248914301395,
+          "timeouts": 0,
+          "official_scored_errors": 29
+        }
+      },
+      "paired": {
+        "final": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "baseline": {
+          "a_wins": 1,
+          "a_losses": 0,
+          "saved_errors": 1,
+          "saved_error_rate": 0.0001,
+          "paired_se": 0.0001,
+          "paired_normal_ci95": [
+            -9.599639845400003e-05,
+            0.000295996398454
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            -9.599999999999999e-05,
+            0.000296
+          ]
+        }
+      }
+    },
+    "L7_p0.01_xi0": {
+      "decoders": {
+        "candidate_a": {
+          "errors": 0,
+          "shots": 10000,
+          "error_rate": 0.0,
+          "accuracy": 1.0,
+          "score": 0,
+          "stratified_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "max_build_decode_s": 0.09187774988822639,
+          "mean_decode_s": 0.0011193749960511923,
+          "timeouts": 0,
+          "official_scored_errors": 0
+        },
+        "final": {
+          "errors": 0,
+          "shots": 10000,
+          "error_rate": 0.0,
+          "accuracy": 1.0,
+          "score": 0,
+          "stratified_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "max_build_decode_s": 0.09300700016319752,
+          "mean_decode_s": 0.0015645830426365137,
+          "timeouts": 0,
+          "official_scored_errors": 0
+        },
+        "baseline": {
+          "errors": 0,
+          "shots": 10000,
+          "error_rate": 0.0,
+          "accuracy": 1.0,
+          "score": 0,
+          "stratified_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "max_build_decode_s": 0.0618811659514904,
+          "mean_decode_s": 0.0014162498991936445,
+          "timeouts": 0,
+          "official_scored_errors": 0
+        }
+      },
+      "paired": {
+        "final": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "baseline": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "L7_p0.01_xi2": {
+      "decoders": {
+        "candidate_a": {
+          "errors": 9,
+          "shots": 10000,
+          "error_rate": 0.0009,
+          "accuracy": 0.9991,
+          "score": 900,
+          "stratified_normal_ci95": [
+            0.0003122646595618058,
+            0.0014877353404381941
+          ],
+          "max_build_decode_s": 0.0902229999192059,
+          "mean_decode_s": 0.001150290947407484,
+          "timeouts": 0,
+          "official_scored_errors": 9
+        },
+        "final": {
+          "errors": 9,
+          "shots": 10000,
+          "error_rate": 0.0009,
+          "accuracy": 0.9991,
+          "score": 900,
+          "stratified_normal_ci95": [
+            0.0003122646595618058,
+            0.0014877353404381941
+          ],
+          "max_build_decode_s": 0.09074966702610254,
+          "mean_decode_s": 0.0012260840740054846,
+          "timeouts": 0,
+          "official_scored_errors": 9
+        },
+        "baseline": {
+          "errors": 11,
+          "shots": 10000,
+          "error_rate": 0.0011,
+          "accuracy": 0.9989,
+          "score": 1100,
+          "stratified_normal_ci95": [
+            0.0004502991716181979,
+            0.0017497008283818023
+          ],
+          "max_build_decode_s": 0.06124954205006361,
+          "mean_decode_s": 0.0015460830181837082,
+          "timeouts": 0,
+          "official_scored_errors": 11
+        }
+      },
+      "paired": {
+        "final": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "baseline": {
+          "a_wins": 2,
+          "a_losses": 0,
+          "saved_errors": 2,
+          "saved_error_rate": 0.0002,
+          "paired_se": 0.00014141428428549925,
+          "paired_normal_ci95": [
+            -7.716690409907941e-05,
+            0.00047716690409907946
+          ],
+          "mcnemar_exact_p": 0.5,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            -7.717199719957848e-05,
+            0.00047717199719957853
+          ]
+        }
+      }
+    },
+    "L7_p0.01_xi5": {
+      "decoders": {
+        "candidate_a": {
+          "errors": 38,
+          "shots": 10000,
+          "error_rate": 0.0038,
+          "accuracy": 0.9962,
+          "score": 3800,
+          "stratified_normal_ci95": [
+            0.002594072668192648,
+            0.005005927331807352
+          ],
+          "max_build_decode_s": 0.08946758299134672,
+          "mean_decode_s": 0.001187165966257453,
+          "timeouts": 0,
+          "official_scored_errors": 38
+        },
+        "final": {
+          "errors": 38,
+          "shots": 10000,
+          "error_rate": 0.0038,
+          "accuracy": 0.9962,
+          "score": 3800,
+          "stratified_normal_ci95": [
+            0.002594072668192648,
+            0.005005927331807352
+          ],
+          "max_build_decode_s": 0.08983395807445049,
+          "mean_decode_s": 0.0011605829931795597,
+          "timeouts": 0,
+          "official_scored_errors": 38
+        },
+        "baseline": {
+          "errors": 43,
+          "shots": 10000,
+          "error_rate": 0.0043,
+          "accuracy": 0.9957,
+          "score": 4300,
+          "stratified_normal_ci95": [
+            0.003017508330787291,
+            0.005582491669212709
+          ],
+          "max_build_decode_s": 0.0600579169113189,
+          "mean_decode_s": 0.0017659999430179596,
+          "timeouts": 0,
+          "official_scored_errors": 43
+        }
+      },
+      "paired": {
+        "final": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "baseline": {
+          "a_wins": 5,
+          "a_losses": 0,
+          "saved_errors": 5,
+          "saved_error_rate": 0.0005,
+          "paired_se": 0.0002235620674439203,
+          "paired_normal_ci95": [
+            6.182639950061376e-05,
+            0.0009381736004993863
+          ],
+          "mcnemar_exact_p": 0.0625,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            6.181834780991623e-05,
+            0.0009381816521900838
+          ]
+        }
+      }
+    },
+    "L7_p0.01_xi10": {
+      "decoders": {
+        "candidate_a": {
+          "errors": 53,
+          "shots": 10000,
+          "error_rate": 0.0053,
+          "accuracy": 0.9947,
+          "score": 5300,
+          "stratified_normal_ci95": [
+            0.003876884774306732,
+            0.006723115225693268
+          ],
+          "max_build_decode_s": 0.09026570920832455,
+          "mean_decode_s": 0.0010952921584248543,
+          "timeouts": 0,
+          "official_scored_errors": 53
+        },
+        "final": {
+          "errors": 53,
+          "shots": 10000,
+          "error_rate": 0.0053,
+          "accuracy": 0.9947,
+          "score": 5300,
+          "stratified_normal_ci95": [
+            0.003876884774306732,
+            0.006723115225693268
+          ],
+          "max_build_decode_s": 0.09274450014345348,
+          "mean_decode_s": 0.0012200830969959497,
+          "timeouts": 0,
+          "official_scored_errors": 53
+        },
+        "baseline": {
+          "errors": 53,
+          "shots": 10000,
+          "error_rate": 0.0053,
+          "accuracy": 0.9947,
+          "score": 5300,
+          "stratified_normal_ci95": [
+            0.003876884774306732,
+            0.006723115225693268
+          ],
+          "max_build_decode_s": 0.060369583079591393,
+          "mean_decode_s": 0.0017947079613804817,
+          "timeouts": 0,
+          "official_scored_errors": 53
+        }
+      },
+      "paired": {
+        "final": {
+          "a_wins": 0,
+          "a_losses": 0,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0,
+          "paired_normal_ci95": [
+            0.0,
+            0.0
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "baseline": {
+          "a_wins": 2,
+          "a_losses": 2,
+          "saved_errors": 0,
+          "saved_error_rate": 0.0,
+          "paired_se": 0.0002000100007500625,
+          "paired_normal_ci95": [
+            -0.00039201239801794094,
+            0.00039201239801794094
+          ],
+          "mcnemar_exact_p": 1.0,
+          "normal_ci_caution": "approximate; few discordances need exact McNemar test; zero-width with zero discordances is not population certainty",
+          "stratified_paired_ci95": [
+            -0.0003920196014701226,
+            0.0003920196014701226
+          ]
+        }
+      }
+    }
+  },
+  "provenance": {
+    "dependencies": {
+      "numpy": "2.2.6",
+      "scipy": "1.15.3",
+      "stim": "1.15.0",
+      "pymatching": "2.3.1"
+    },
+    "python": "3.10.20 (main, Mar  3 2026, 00:49:35) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "sha256": {
+      "solve.py": "feb0ac428185865eece12753f389ac690f9163f3f76cfc3d4cc4153b682bd108",
+      "src/qec_benchmark/noise.py": "2a9c800b21d6bd2d90a2b2edf4f6617cd6619796fd8c8b9e0d526a7bfe0cc4e2",
+      "src/qec_benchmark/config.py": "f6d70b432e661890562dcc4c015b54d2ed987f4d0c0cd9be1895a4baadd24f81",
+      "src/qec_benchmark/stim_surface_code.py": "0a1eaf3e54b8525da63bec2215833167b6a3f7a3178932c8a96a4a2bcd9ee29b",
+      "src/qec_benchmark/evaluation.py": "3e708062e7228e31891c8e60e6785335f67efe9c68effa4b61c1353836b6fd70",
+      "experiments/tracks/A/run_track_a.py": "082649d1984bd615028da442963bf5160a31df0f9b0fa8c3a586d4fe312d836e",
+      "experiments/tracks/A/candidate_a.py": "12a8324474abf7712ee1429a5466973af77758561c8a67f9c38fbc92a392011c",
+      "experiments/tracks/A/frozen_tables.py": "debb61816d64cb556cc58c17a3a1a9cf5d0a8c90c08fe3d480d9d931cf29c119"
+    },
+    "memory_method": "whole-process high-water RSS, includes sampling and integration"
+  },
+  "seeds": [
+    8675309
+  ],
+  "shots_per_point": 10000,
+  "rng_semantics": "one default_rng(seed); all 24 points in challenge_grid order, one sampler call per point; shared shots across decoders",
+  "training": "frozen model-only tables; independent integration seed; no benchmark observations used to select entries",
+  "time_limit": 2.5,
+  "offline_integration_in_timer": false
+}
