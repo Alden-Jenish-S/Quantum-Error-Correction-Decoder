@@ -1,0 +1,13 @@
+{
+  "decoder": "baseline",
+  "git_revision": "96fb86f2499ee86b77ad72c9a358d4dbc3f6325e",
+  "grid": "challenge",
+  "rows": 24,
+  "score_errors_per_million": 3146,
+  "seeds": [
+    42
+  ],
+  "shots": 10000,
+  "total_errors": 755,
+  "total_shots": 240000
+}

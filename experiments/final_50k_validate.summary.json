@@ -1,0 +1,37 @@
+{
+  "decoder": "final",
+  "dependencies": {
+    "numpy": "2.2.6",
+    "pymatching": "2.3.1",
+    "python": "3.10.20",
+    "scipy": "1.15.3",
+    "stim": "1.15.0"
+  },
+  "git_revision": null,
+  "grid": "challenge",
+  "memory_method": "resource.getrusage(RUSAGE_SELF).ru_maxrss, normalized to bytes (Darwin bytes; Linux KiB); whole-process high-water including sampling, not isolated decoder memory",
+  "platform": {
+    "machine": "arm64",
+    "python_implementation": "CPython",
+    "release": "25.6.0",
+    "system": "Darwin"
+  },
+  "process_maxrss_bytes": 168509440,
+  "process_rss_bytes": 168509440,
+  "rows": 120,
+  "score_errors_per_million": 3016,
+  "seeds": [
+    42,
+    137,
+    256,
+    1729,
+    31415
+  ],
+  "shots": 50000,
+  "solve_sha256": "feb0ac428185865eece12753f389ac690f9163f3f76cfc3d4cc4153b682bd108",
+  "solve_size_bytes": 3409,
+  "time_limit": 2.5,
+  "timing_method": "perf_counter wall time from build_decoder entry through decode return/raise; imports, sampling, contract checks and scoring excluded",
+  "total_errors": 18098,
+  "total_shots": 6000000
+}

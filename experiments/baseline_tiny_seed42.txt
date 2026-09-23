@@ -1,0 +1,14 @@
+2026-09-23T08:55:24Z
+
+  QEC Decoder Benchmark
+  3 points | 1,000 shots | seed 42
+
+      L       p     xi     Errors
+  ────────────────────────────────
+      3   0.005    0.0          2
+      3   0.010    2.0          8
+      5   0.010    5.0          4
+
+        Total:         14 errors in 3,000 shots
+        Score:      4,667 errors per million
+         Time:        0.1s

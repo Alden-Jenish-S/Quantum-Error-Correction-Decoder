@@ -1,0 +1,138 @@
+{
+  "crashed": false,
+  "dependencies": {
+    "numpy": "2.2.6",
+    "pymatching": "2.3.1",
+    "python": "3.10.20",
+    "scipy": "1.15.3",
+    "stim": "1.15.0"
+  },
+  "exception": null,
+  "exception_type": null,
+  "git_revision": null,
+  "grid": "tiny",
+  "input_check_method": "Separate post-benchmark 8-shot bool/uint8, writable/read-only, repeatability and empty-batch probes; no full-batch immutability claim",
+  "input_contract_checks": [
+    {
+      "L": 3,
+      "exception": null,
+      "p": 0.005,
+      "passed": true,
+      "xi": 0.0
+    },
+    {
+      "L": 3,
+      "exception": null,
+      "p": 0.01,
+      "passed": true,
+      "xi": 2.0
+    },
+    {
+      "L": 5,
+      "exception": null,
+      "p": 0.01,
+      "passed": true,
+      "xi": 5.0
+    }
+  ],
+  "mean_seed_score": 4667,
+  "memory_method": "resource.getrusage(RUSAGE_SELF).ru_maxrss normalized to bytes (Darwin bytes; Linux KiB); whole-process high-water, including sampling, retained predictions and contract probes, not isolated decoder memory.",
+  "passed": true,
+  "platform": {
+    "machine": "arm64",
+    "python_implementation": "CPython",
+    "release": "25.6.0",
+    "system": "Darwin"
+  },
+  "points": [
+    {
+      "L": 3,
+      "build_elapsed_s": 0.014047499978914857,
+      "contract_error": null,
+      "contract_valid": true,
+      "crashed": false,
+      "decode_elapsed_s": 0.0002134160604327917,
+      "elapsed_s": 0.014266666024923325,
+      "error_rate": 0.002,
+      "errors": 2,
+      "exception": null,
+      "exception_type": null,
+      "failure_stage": null,
+      "p": 0.005,
+      "process_maxrss_bytes": 86638592,
+      "process_rss_bytes": 86638592,
+      "seed": 42,
+      "shots": 1000,
+      "time_limit_exceeded": false,
+      "timed_out": false,
+      "xi": 0.0
+    },
+    {
+      "L": 3,
+      "build_elapsed_s": 0.01380624994635582,
+      "contract_error": null,
+      "contract_valid": true,
+      "crashed": false,
+      "decode_elapsed_s": 4.5042019337415695e-05,
+      "elapsed_s": 0.013855749974027276,
+      "error_rate": 0.008,
+      "errors": 8,
+      "exception": null,
+      "exception_type": null,
+      "failure_stage": null,
+      "p": 0.01,
+      "process_maxrss_bytes": 86638592,
+      "process_rss_bytes": 86638592,
+      "seed": 42,
+      "shots": 1000,
+      "time_limit_exceeded": false,
+      "timed_out": false,
+      "xi": 2.0
+    },
+    {
+      "L": 5,
+      "build_elapsed_s": 0.03083341708406806,
+      "contract_error": null,
+      "contract_valid": true,
+      "crashed": false,
+      "decode_elapsed_s": 0.00011079199612140656,
+      "elapsed_s": 0.030951084103435278,
+      "error_rate": 0.004,
+      "errors": 4,
+      "exception": null,
+      "exception_type": null,
+      "failure_stage": null,
+      "p": 0.01,
+      "process_maxrss_bytes": 86638592,
+      "process_rss_bytes": 86638592,
+      "seed": 42,
+      "shots": 1000,
+      "time_limit_exceeded": false,
+      "timed_out": false,
+      "xi": 5.0
+    }
+  ],
+  "process_maxrss_bytes": 86704128,
+  "process_rss_bytes": 86704128,
+  "score": 4667,
+  "score_errors_per_million": 4667,
+  "seed": 42,
+  "seed_scores": [
+    {
+      "score": 4667,
+      "seed": 42
+    }
+  ],
+  "seeds": [
+    42
+  ],
+  "shots": 1000,
+  "size_valid": true,
+  "solve_sha256": "feb0ac428185865eece12753f389ac690f9163f3f76cfc3d4cc4153b682bd108",
+  "solve_size_bytes": 3409,
+  "time_limit": 2.5,
+  "timed_out": false,
+  "timing_method": "perf_counter wall time from build_decoder entry through decode return/raise, including construction and small wrapper overhead; imports, sampling, output validation and input probes excluded. The unmodified run_benchmark enforces its own monotonic 2.5s window including all wrapper overhead.",
+  "total_errors": 14,
+  "total_shots": 3000
+}

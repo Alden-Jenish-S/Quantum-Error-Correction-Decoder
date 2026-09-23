@@ -1,0 +1,45 @@
+# Local Python environments and packaging outputs
+.venv/
+.venv*/
+venv/
+env/
+ENV/
+build/
+dist/
+*.egg-info/
+
+# Python and test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Operating-system/editor noise
+.DS_Store
+.AppleDouble
+.LSOverride
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Temporary logs, scratch data, and raw caches
+*.log
+*.tmp
+*.bak
+*.cache
+experiments/raw/
+experiments/tmp/
+experiments/cache/
+
+# Keep named, reviewed experiment results and plots under version control.
