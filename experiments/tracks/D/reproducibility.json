@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "freeze_sha256": "33fb9f3072ef522fea354c0e00ee235a6279aca71d8be9e0755afcdb8b74f56c",
+  "points": [
+    "L5_p0.005_xi2",
+    "L5_p0.005_xi5",
+    "L5_p0.005_xi10",
+    "L5_p0.01_xi2",
+    "L5_p0.01_xi5",
+    "L5_p0.01_xi10",
+    "L7_p0.005_xi2",
+    "L7_p0.005_xi5",
+    "L7_p0.005_xi10",
+    "L7_p0.01_xi2",
+    "L7_p0.01_xi5",
+    "L7_p0.01_xi10"
+  ],
+  "shots_replayed": 12000000,
+  "counts_equal": true,
+  "constants_equal": true,
+  "model_files_overwritten": false,
+  "elapsed_s": 14.908043874893337,
+  "maxrss_bytes": 173654016,
+  "environment": {
+    "python": "3.10.20 (main, Mar  3 2026, 00:49:35) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "dependencies": {
+      "numpy": "2.2.6",
+      "scipy": "1.15.3",
+      "stim": "1.15.0",
+      "pymatching": "2.3.1"
+    },
+    "memory_method": "RSS bytes normalized for Darwin/Linux; whole process incl sampling and allocators, not decoder incremental allocation"
+  }
+}

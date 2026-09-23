@@ -1,0 +1,430 @@
+{
+  "shots_per_point": 250000,
+  "seed": 2718281,
+  "batch": 25000,
+  "points": {
+    "L5_p0.005_xi2": {
+      "seed_sequence_entropy": [
+        2718281,
+        5,
+        5000,
+        2
+      ],
+      "shots": 250000,
+      "raw_unique_syndromes": 432,
+      "canonical_unique_syndromes": 283,
+      "canonical_cells_support_ge20": 49,
+      "variants": {
+        "raw": {
+          "flipped_ids": 24,
+          "payload_bytes": 4096,
+          "encoded_chars": 315,
+          "changed_cell_min_support": 1
+        },
+        "supported": {
+          "flipped_ids": 0,
+          "payload_bytes": 4096,
+          "encoded_chars": 204,
+          "changed_cell_min_support": null
+        },
+        "supported_nosym": {
+          "flipped_ids": 0,
+          "payload_bytes": 4096,
+          "encoded_chars": 204,
+          "changed_cell_min_support": null
+        }
+      },
+      "elapsed_s": 0.661286833928898,
+      "maxrss_bytes": 138919936
+    },
+    "L5_p0.005_xi5": {
+      "seed_sequence_entropy": [
+        2718281,
+        5,
+        5000,
+        5
+      ],
+      "shots": 250000,
+      "raw_unique_syndromes": 813,
+      "canonical_unique_syndromes": 550,
+      "canonical_cells_support_ge20": 65,
+      "variants": {
+        "raw": {
+          "flipped_ids": 169,
+          "payload_bytes": 4096,
+          "encoded_chars": 580,
+          "changed_cell_min_support": 1
+        },
+        "supported": {
+          "flipped_ids": 0,
+          "payload_bytes": 4096,
+          "encoded_chars": 204,
+          "changed_cell_min_support": null
+        },
+        "supported_nosym": {
+          "flipped_ids": 0,
+          "payload_bytes": 4096,
+          "encoded_chars": 204,
+          "changed_cell_min_support": null
+        }
+      },
+      "elapsed_s": 0.6700943331234157,
+      "maxrss_bytes": 138936320
+    },
+    "L5_p0.005_xi10": {
+      "seed_sequence_entropy": [
+        2718281,
+        5,
+        5000,
+        10
+      ],
+      "shots": 250000,
+      "raw_unique_syndromes": 1056,
+      "canonical_unique_syndromes": 746,
+      "canonical_cells_support_ge20": 65,
+      "variants": {
+        "raw": {
+          "flipped_ids": 319,
+          "payload_bytes": 4096,
+          "encoded_chars": 717,
+          "changed_cell_min_support": 1
+        },
+        "supported": {
+          "flipped_ids": 0,
+          "payload_bytes": 4096,
+          "encoded_chars": 204,
+          "changed_cell_min_support": null
+        },
+        "supported_nosym": {
+          "flipped_ids": 0,
+          "payload_bytes": 4096,
+          "encoded_chars": 204,
+          "changed_cell_min_support": null
+        }
+      },
+      "elapsed_s": 0.597983832936734,
+      "maxrss_bytes": 138936320
+    },
+    "L5_p0.01_xi2": {
+      "seed_sequence_entropy": [
+        2718281,
+        5,
+        10000,
+        2
+      ],
+      "shots": 250000,
+      "raw_unique_syndromes": 778,
+      "canonical_unique_syndromes": 512,
+      "canonical_cells_support_ge20": 110,
+      "variants": {
+        "raw": {
+          "flipped_ids": 80,
+          "payload_bytes": 4096,
+          "encoded_chars": 454,
+          "changed_cell_min_support": 1
+        },
+        "supported": {
+          "flipped_ids": 0,
+          "payload_bytes": 4096,
+          "encoded_chars": 204,
+          "changed_cell_min_support": null
+        },
+        "supported_nosym": {
+          "flipped_ids": 0,
+          "payload_bytes": 4096,
+          "encoded_chars": 204,
+          "changed_cell_min_support": null
+        }
+      },
+      "elapsed_s": 0.6115551670081913,
+      "maxrss_bytes": 138936320
+    },
+    "L5_p0.01_xi5": {
+      "seed_sequence_entropy": [
+        2718281,
+        5,
+        10000,
+        5
+      ],
+      "shots": 250000,
+      "raw_unique_syndromes": 1283,
+      "canonical_unique_syndromes": 846,
+      "canonical_cells_support_ge20": 117,
+      "variants": {
+        "raw": {
+          "flipped_ids": 328,
+          "payload_bytes": 4096,
+          "encoded_chars": 714,
+          "changed_cell_min_support": 1
+        },
+        "supported": {
+          "flipped_ids": 0,
+          "payload_bytes": 4096,
+          "encoded_chars": 204,
+          "changed_cell_min_support": null
+        },
+        "supported_nosym": {
+          "flipped_ids": 0,
+          "payload_bytes": 4096,
+          "encoded_chars": 204,
+          "changed_cell_min_support": null
+        }
+      },
+      "elapsed_s": 0.7023216248489916,
+      "maxrss_bytes": 138936320
+    },
+    "L5_p0.01_xi10": {
+      "seed_sequence_entropy": [
+        2718281,
+        5,
+        10000,
+        10
+      ],
+      "shots": 250000,
+      "raw_unique_syndromes": 1602,
+      "canonical_unique_syndromes": 1097,
+      "canonical_cells_support_ge20": 107,
+      "variants": {
+        "raw": {
+          "flipped_ids": 514,
+          "payload_bytes": 4096,
+          "encoded_chars": 819,
+          "changed_cell_min_support": 1
+        },
+        "supported": {
+          "flipped_ids": 2,
+          "payload_bytes": 4096,
+          "encoded_chars": 208,
+          "changed_cell_min_support": 86
+        },
+        "supported_nosym": {
+          "flipped_ids": 0,
+          "payload_bytes": 4096,
+          "encoded_chars": 204,
+          "changed_cell_min_support": null
+        }
+      },
+      "elapsed_s": 0.6455797080416232,
+      "maxrss_bytes": 139149312
+    },
+    "L7_p0.005_xi2": {
+      "seed_sequence_entropy": [
+        2718281,
+        7,
+        5000,
+        2
+      ],
+      "shots": 250000,
+      "raw_unique_syndromes": 2219,
+      "canonical_unique_syndromes": 1624,
+      "canonical_cells_support_ge20": 84,
+      "variants": {
+        "raw": {
+          "flipped_ids": 44,
+          "payload_bytes": 176,
+          "encoded_chars": 184,
+          "changed_cell_min_support": 1
+        },
+        "supported": {
+          "flipped_ids": 0,
+          "payload_bytes": 0,
+          "encoded_chars": 10,
+          "changed_cell_min_support": null
+        },
+        "supported_nosym": {
+          "flipped_ids": 0,
+          "payload_bytes": 0,
+          "encoded_chars": 10,
+          "changed_cell_min_support": null
+        }
+      },
+      "elapsed_s": 1.086538708070293,
+      "maxrss_bytes": 165593088
+    },
+    "L7_p0.005_xi5": {
+      "seed_sequence_entropy": [
+        2718281,
+        7,
+        5000,
+        5
+      ],
+      "shots": 250000,
+      "raw_unique_syndromes": 3830,
+      "canonical_unique_syndromes": 3075,
+      "canonical_cells_support_ge20": 98,
+      "variants": {
+        "raw": {
+          "flipped_ids": 392,
+          "payload_bytes": 1568,
+          "encoded_chars": 1368,
+          "changed_cell_min_support": 1
+        },
+        "supported": {
+          "flipped_ids": 0,
+          "payload_bytes": 0,
+          "encoded_chars": 10,
+          "changed_cell_min_support": null
+        },
+        "supported_nosym": {
+          "flipped_ids": 0,
+          "payload_bytes": 0,
+          "encoded_chars": 10,
+          "changed_cell_min_support": null
+        }
+      },
+      "elapsed_s": 1.1579380000475794,
+      "maxrss_bytes": 165609472
+    },
+    "L7_p0.005_xi10": {
+      "seed_sequence_entropy": [
+        2718281,
+        7,
+        5000,
+        10
+      ],
+      "shots": 250000,
+      "raw_unique_syndromes": 4484,
+      "canonical_unique_syndromes": 3813,
+      "canonical_cells_support_ge20": 80,
+      "variants": {
+        "raw": {
+          "flipped_ids": 912,
+          "payload_bytes": 3648,
+          "encoded_chars": 3183,
+          "changed_cell_min_support": 1
+        },
+        "supported": {
+          "flipped_ids": 0,
+          "payload_bytes": 0,
+          "encoded_chars": 10,
+          "changed_cell_min_support": null
+        },
+        "supported_nosym": {
+          "flipped_ids": 0,
+          "payload_bytes": 0,
+          "encoded_chars": 10,
+          "changed_cell_min_support": null
+        }
+      },
+      "elapsed_s": 1.1876151249743998,
+      "maxrss_bytes": 165609472
+    },
+    "L7_p0.01_xi2": {
+      "seed_sequence_entropy": [
+        2718281,
+        7,
+        10000,
+        2
+      ],
+      "shots": 250000,
+      "raw_unique_syndromes": 5243,
+      "canonical_unique_syndromes": 4074,
+      "canonical_cells_support_ge20": 325,
+      "variants": {
+        "raw": {
+          "flipped_ids": 154,
+          "payload_bytes": 616,
+          "encoded_chars": 572,
+          "changed_cell_min_support": 1
+        },
+        "supported": {
+          "flipped_ids": 0,
+          "payload_bytes": 0,
+          "encoded_chars": 10,
+          "changed_cell_min_support": null
+        },
+        "supported_nosym": {
+          "flipped_ids": 0,
+          "payload_bytes": 0,
+          "encoded_chars": 10,
+          "changed_cell_min_support": null
+        }
+      },
+      "elapsed_s": 1.159512332873419,
+      "maxrss_bytes": 165609472
+    },
+    "L7_p0.01_xi5": {
+      "seed_sequence_entropy": [
+        2718281,
+        7,
+        10000,
+        5
+      ],
+      "shots": 250000,
+      "raw_unique_syndromes": 7454,
+      "canonical_unique_syndromes": 6088,
+      "canonical_cells_support_ge20": 192,
+      "variants": {
+        "raw": {
+          "flipped_ids": 1100,
+          "payload_bytes": 4400,
+          "encoded_chars": 3634,
+          "changed_cell_min_support": 1
+        },
+        "supported": {
+          "flipped_ids": 0,
+          "payload_bytes": 0,
+          "encoded_chars": 10,
+          "changed_cell_min_support": null
+        },
+        "supported_nosym": {
+          "flipped_ids": 0,
+          "payload_bytes": 0,
+          "encoded_chars": 10,
+          "changed_cell_min_support": null
+        }
+      },
+      "elapsed_s": 1.1488869581371546,
+      "maxrss_bytes": 165609472
+    },
+    "L7_p0.01_xi10": {
+      "seed_sequence_entropy": [
+        2718281,
+        7,
+        10000,
+        10
+      ],
+      "shots": 250000,
+      "raw_unique_syndromes": 8034,
+      "canonical_unique_syndromes": 6910,
+      "canonical_cells_support_ge20": 131,
+      "variants": {
+        "raw": {
+          "flipped_ids": 2113,
+          "payload_bytes": 8452,
+          "encoded_chars": 7265,
+          "changed_cell_min_support": 1
+        },
+        "supported": {
+          "flipped_ids": 0,
+          "payload_bytes": 0,
+          "encoded_chars": 10,
+          "changed_cell_min_support": null
+        },
+        "supported_nosym": {
+          "flipped_ids": 0,
+          "payload_bytes": 0,
+          "encoded_chars": 10,
+          "changed_cell_min_support": null
+        }
+      },
+      "elapsed_s": 1.1662796249147505,
+      "maxrss_bytes": 165609472
+    }
+  },
+  "environment": {
+    "python": "3.10.20 (main, Mar  3 2026, 00:49:35) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "dependencies": {
+      "numpy": "2.2.6",
+      "scipy": "1.15.3",
+      "stim": "1.15.0",
+      "pymatching": "2.3.1"
+    },
+    "memory_method": "RSS bytes normalized for Darwin/Linux; whole process incl sampling and allocators, not decoder incremental allocation"
+  },
+  "elapsed_s": 11.33506370917894,
+  "maxrss_bytes": 165609472,
+  "prior": "Beta(wrong+1,right+9); >=20 samples, lower 1% posterior quantile > .5",
+  "symmetry_counts": "one canonical observation per independent mask; no augmented pseudo-replicates"
+}

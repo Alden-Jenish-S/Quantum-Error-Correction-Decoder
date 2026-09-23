@@ -1,0 +1,390 @@
+{
+  "status": "PASS",
+  "freeze_sha256": "33fb9f3072ef522fea354c0e00ee235a6279aca71d8be9e0755afcdb8b74f56c",
+  "rows_audited": {
+    "pilot_250k": 24,
+    "pilot_1mtrain": 24,
+    "test": 72,
+    "stress": 2
+  },
+  "serialization": {
+    "raw": {
+      "payload_bytes": 87260,
+      "encoded_chars": 53725,
+      "L7_payload_bytes": 62684
+    },
+    "supported": {
+      "payload_bytes": 24592,
+      "encoded_chars": 1340,
+      "L7_payload_bytes": 16
+    },
+    "supported_nosym": {
+      "payload_bytes": 24580,
+      "encoded_chars": 1297,
+      "L7_payload_bytes": 4
+    }
+  },
+  "frozen_tables_source_bytes": 58173,
+  "coverage": {
+    "L5_p0.005_xi2": {
+      "raw": {
+        "unseen_shots": 86,
+        "support_ge20_shots": 299349,
+        "nonzero_syndrome_shots": 31513,
+        "unseen_nonzero_rate": 0.002729032462793133
+      },
+      "sym": {
+        "unseen_shots": 55,
+        "support_ge20_shots": 299641,
+        "nonzero_syndrome_shots": 31513,
+        "unseen_nonzero_rate": 0.0017453114587630502
+      }
+    },
+    "L5_p0.005_xi5": {
+      "raw": {
+        "unseen_shots": 196,
+        "support_ge20_shots": 298737,
+        "nonzero_syndrome_shots": 21629,
+        "unseen_nonzero_rate": 0.009061907624023303
+      },
+      "sym": {
+        "unseen_shots": 113,
+        "support_ge20_shots": 299133,
+        "nonzero_syndrome_shots": 21629,
+        "unseen_nonzero_rate": 0.005224467150584863
+      }
+    },
+    "L5_p0.005_xi10": {
+      "raw": {
+        "unseen_shots": 238,
+        "support_ge20_shots": 298275,
+        "nonzero_syndrome_shots": 14469,
+        "unseen_nonzero_rate": 0.01644895984518626
+      },
+      "sym": {
+        "unseen_shots": 127,
+        "support_ge20_shots": 298707,
+        "nonzero_syndrome_shots": 14469,
+        "unseen_nonzero_rate": 0.008777386135876702
+      }
+    },
+    "L5_p0.01_xi2": {
+      "raw": {
+        "unseen_shots": 101,
+        "support_ge20_shots": 298943,
+        "nonzero_syndrome_shots": 56808,
+        "unseen_nonzero_rate": 0.0017779186030136601
+      },
+      "sym": {
+        "unseen_shots": 50,
+        "support_ge20_shots": 299294,
+        "nonzero_syndrome_shots": 56808,
+        "unseen_nonzero_rate": 0.0008801577242641881
+      }
+    },
+    "L5_p0.01_xi5": {
+      "raw": {
+        "unseen_shots": 211,
+        "support_ge20_shots": 297823,
+        "nonzero_syndrome_shots": 37855,
+        "unseen_nonzero_rate": 0.005573900409457139
+      },
+      "sym": {
+        "unseen_shots": 102,
+        "support_ge20_shots": 298575,
+        "nonzero_syndrome_shots": 37855,
+        "unseen_nonzero_rate": 0.0026944921410645886
+      }
+    },
+    "L5_p0.01_xi10": {
+      "raw": {
+        "unseen_shots": 247,
+        "support_ge20_shots": 297245,
+        "nonzero_syndrome_shots": 25107,
+        "unseen_nonzero_rate": 0.009837893814474051
+      },
+      "sym": {
+        "unseen_shots": 113,
+        "support_ge20_shots": 298167,
+        "nonzero_syndrome_shots": 25107,
+        "unseen_nonzero_rate": 0.004500736846297845
+      }
+    },
+    "L7_p0.005_xi2": {
+      "raw": {
+        "unseen_shots": 798,
+        "support_ge20_shots": 296071,
+        "nonzero_syndrome_shots": 57323,
+        "unseen_nonzero_rate": 0.013921113689095127
+      },
+      "sym": {
+        "unseen_shots": 588,
+        "support_ge20_shots": 298052,
+        "nonzero_syndrome_shots": 57323,
+        "unseen_nonzero_rate": 0.01025766271828062
+      }
+    },
+    "L7_p0.005_xi5": {
+      "raw": {
+        "unseen_shots": 1954,
+        "support_ge20_shots": 293912,
+        "nonzero_syndrome_shots": 37647,
+        "unseen_nonzero_rate": 0.05190320609875953
+      },
+      "sym": {
+        "unseen_shots": 1553,
+        "support_ge20_shots": 295232,
+        "nonzero_syndrome_shots": 37647,
+        "unseen_nonzero_rate": 0.04125162695566712
+      }
+    },
+    "L7_p0.005_xi10": {
+      "raw": {
+        "unseen_shots": 2839,
+        "support_ge20_shots": 293249,
+        "nonzero_syndrome_shots": 23906,
+        "unseen_nonzero_rate": 0.11875679745670543
+      },
+      "sym": {
+        "unseen_shots": 2341,
+        "support_ge20_shots": 294283,
+        "nonzero_syndrome_shots": 23906,
+        "unseen_nonzero_rate": 0.09792520706098887
+      }
+    },
+    "L7_p0.01_xi2": {
+      "raw": {
+        "unseen_shots": 2251,
+        "support_ge20_shots": 293157,
+        "nonzero_syndrome_shots": 99794,
+        "unseen_nonzero_rate": 0.02255646632062048
+      },
+      "sym": {
+        "unseen_shots": 1635,
+        "support_ge20_shots": 293953,
+        "nonzero_syndrome_shots": 99794,
+        "unseen_nonzero_rate": 0.01638375052608373
+      }
+    },
+    "L7_p0.01_xi5": {
+      "raw": {
+        "unseen_shots": 4133,
+        "support_ge20_shots": 288620,
+        "nonzero_syndrome_shots": 64418,
+        "unseen_nonzero_rate": 0.06415908596976
+      },
+      "sym": {
+        "unseen_shots": 3301,
+        "support_ge20_shots": 290944,
+        "nonzero_syndrome_shots": 64418,
+        "unseen_nonzero_rate": 0.05124344127417803
+      }
+    },
+    "L7_p0.01_xi10": {
+      "raw": {
+        "unseen_shots": 5459,
+        "support_ge20_shots": 287902,
+        "nonzero_syndrome_shots": 40543,
+        "unseen_nonzero_rate": 0.13464716473867253
+      },
+      "sym": {
+        "unseen_shots": 4558,
+        "support_ge20_shots": 289730,
+        "nonzero_syndrome_shots": 40543,
+        "unseen_nonzero_rate": 0.11242384628665861
+      }
+    }
+  },
+  "supported_cells": {
+    "L5_p0.005_xi2": [],
+    "L5_p0.005_xi5": [
+      {
+        "syndrome_id": 6,
+        "iid": 1,
+        "candidate": 0,
+        "canonical_id": 6,
+        "training_wrong": 122,
+        "training_right": 48,
+        "posterior_lower01": 0.6001920747829044
+      },
+      {
+        "syndrome_id": 1536,
+        "iid": 1,
+        "candidate": 0,
+        "canonical_id": 6,
+        "training_wrong": 122,
+        "training_right": 48,
+        "posterior_lower01": 0.6001920747829044
+      }
+    ],
+    "L5_p0.005_xi10": [
+      {
+        "syndrome_id": 6,
+        "iid": 1,
+        "candidate": 0,
+        "canonical_id": 6,
+        "training_wrong": 101,
+        "training_right": 55,
+        "posterior_lower01": 0.5251410138647039
+      },
+      {
+        "syndrome_id": 1536,
+        "iid": 1,
+        "candidate": 0,
+        "canonical_id": 6,
+        "training_wrong": 101,
+        "training_right": 55,
+        "posterior_lower01": 0.5251410138647039
+      }
+    ],
+    "L5_p0.01_xi2": [],
+    "L5_p0.01_xi5": [
+      {
+        "syndrome_id": 46,
+        "iid": 1,
+        "candidate": 0,
+        "canonical_id": 46,
+        "training_wrong": 44,
+        "training_right": 15,
+        "posterior_lower01": 0.5145017265545087
+      },
+      {
+        "syndrome_id": 1856,
+        "iid": 1,
+        "candidate": 0,
+        "canonical_id": 46,
+        "training_wrong": 44,
+        "training_right": 15,
+        "posterior_lower01": 0.5145017265545087
+      }
+    ],
+    "L5_p0.01_xi10": [
+      {
+        "syndrome_id": 6,
+        "iid": 1,
+        "candidate": 0,
+        "canonical_id": 6,
+        "training_wrong": 224,
+        "training_right": 101,
+        "posterior_lower01": 0.6106485090395877
+      },
+      {
+        "syndrome_id": 46,
+        "iid": 1,
+        "candidate": 0,
+        "canonical_id": 46,
+        "training_wrong": 56,
+        "training_right": 19,
+        "posterior_lower01": 0.5476903951712013
+      },
+      {
+        "syndrome_id": 1536,
+        "iid": 1,
+        "candidate": 0,
+        "canonical_id": 6,
+        "training_wrong": 224,
+        "training_right": 101,
+        "posterior_lower01": 0.6106485090395877
+      },
+      {
+        "syndrome_id": 1856,
+        "iid": 1,
+        "candidate": 0,
+        "canonical_id": 46,
+        "training_wrong": 56,
+        "training_right": 19,
+        "posterior_lower01": 0.5476903951712013
+      }
+    ],
+    "L7_p0.005_xi2": [],
+    "L7_p0.005_xi5": [],
+    "L7_p0.005_xi10": [],
+    "L7_p0.01_xi2": [],
+    "L7_p0.01_xi5": [],
+    "L7_p0.01_xi10": [
+      {
+        "syndrome_id": 5,
+        "iid": 1,
+        "candidate": 0,
+        "canonical_id": 5,
+        "training_wrong": 29,
+        "training_right": 4,
+        "posterior_lower01": 0.5256442132362895
+      },
+      {
+        "syndrome_id": 40,
+        "iid": 1,
+        "candidate": 0,
+        "canonical_id": 40,
+        "training_wrong": 53,
+        "training_right": 14,
+        "posterior_lower01": 0.5741048911293416
+      },
+      {
+        "syndrome_id": 1310720,
+        "iid": 1,
+        "candidate": 0,
+        "canonical_id": 40,
+        "training_wrong": 53,
+        "training_right": 14,
+        "posterior_lower01": 0.5741048911293416
+      },
+      {
+        "syndrome_id": 10485760,
+        "iid": 1,
+        "candidate": 0,
+        "canonical_id": 5,
+        "training_wrong": 29,
+        "training_right": 4,
+        "posterior_lower01": 0.5256442132362895
+      }
+    ]
+  },
+  "memory": {
+    "pilot_250k": {
+      "max_rss_after_bytes": null,
+      "max_high_water_bytes": 200294400,
+      "interpretation": "whole process, includes sampling, references, previous decoder work and retained allocators"
+    },
+    "pilot_1mtrain": {
+      "max_rss_after_bytes": null,
+      "max_high_water_bytes": 214843392,
+      "interpretation": "whole process, includes sampling, references, previous decoder work and retained allocators"
+    },
+    "test": {
+      "max_rss_after_bytes": null,
+      "max_high_water_bytes": 297271296,
+      "interpretation": "whole process, includes sampling, references, previous decoder work and retained allocators"
+    },
+    "stress": {
+      "max_rss_after_bytes": null,
+      "max_high_water_bytes": 1735589888,
+      "interpretation": "whole process, includes sampling, references, previous decoder work and retained allocators"
+    }
+  },
+  "training_seconds": 21.27428049989976,
+  "training_maxrss_bytes": 178192384,
+  "supported_seed_point_regressions": [
+    {
+      "seed": 130363,
+      "key": "L5_p0.005_xi10",
+      "saved": -1,
+      "rescue": 5,
+      "harm": 6
+    }
+  ],
+  "pointwise_regressions": {
+    "raw": [
+      "L5_p0.005_xi2",
+      "L5_p0.01_xi2",
+      "L7_p0.005_xi2",
+      "L7_p0.005_xi5",
+      "L7_p0.005_xi10",
+      "L7_p0.01_xi2",
+      "L7_p0.01_xi5",
+      "L7_p0.01_xi10"
+    ],
+    "supported": [],
+    "supported_nosym": []
+  }
+}

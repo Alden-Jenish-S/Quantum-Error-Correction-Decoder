@@ -1,0 +1,46 @@
+{
+  "hashes": {
+    "experiments/tracks/D/candidate_d.py": "ff641b09e5262e5e98a29d896b67e3bb625f4f3ebecf3bfe63dd7c81ee27067d",
+    "experiments/tracks/D/reference_iid.py": "a1f97204322cfa053b1ef22f140ed466df3f046dc7bd287d4d831d11a0d678e2",
+    "experiments/tracks/D/geometry.py": "5a5f2c22f6c0605fe24ab11773b89b4d55a0399bee341c2e40a08e2ee1bc5898",
+    "experiments/tracks/D/run_track_d.py": "d7b34a93ed4cf22a8a271577b68f5adad3759dbc3b1f6c45d7a783339a8bd4dd",
+    "experiments/tracks/D/PROTOCOL.md": "0532df29dde011425ed1879be770b626f590a936e0b76746194d764ffc0468dc",
+    "experiments/tracks/D/frozen_tables.py": "41305715e734c347ffab7ab74cfe887db1c1923092122135633048f5f80ce26d",
+    "experiments/tracks/D/training_counts.npz": "6de1a9a7e603ef24132468bcf5d57f8894f7ca5218999974373d76d0b6a7c6f9",
+    "experiments/tracks/D/training.json": "7bb32fe6460913f1c02e67a7235dd7de511106fb6dbafcf605f4eb45d6531b45",
+    "experiments/tracks/A/candidate_a.py": "12a8324474abf7712ee1429a5466973af77758561c8a67f9c38fbc92a392011c",
+    "experiments/tracks/A/frozen_tables.py": "debb61816d64cb556cc58c17a3a1a9cf5d0a8c90c08fe3d480d9d931cf29c119",
+    "src/qec_benchmark/noise.py": "2a9c800b21d6bd2d90a2b2edf4f6617cd6619796fd8c8b9e0d526a7bfe0cc4e2",
+    "src/qec_benchmark/stim_surface_code.py": "0a1eaf3e54b8525da63bec2215833167b6a3f7a3178932c8a96a4a2bcd9ee29b",
+    "src/qec_benchmark/config.py": "f6d70b432e661890562dcc4c015b54d2ed987f4d0c0cd9be1895a4baadd24f81",
+    "src/qec_benchmark/models.py": "80a1935beab90e837e2a8ac07a1998a86b70e509ef4c6b851943b87c7a36c128"
+  },
+  "test_seeds": [
+    104729,
+    130363,
+    155921
+  ],
+  "shots_per_point": 100000,
+  "variants": [
+    "iid",
+    "a_reference",
+    "raw",
+    "supported",
+    "supported_nosym"
+  ],
+  "primary": "supported vs IID, separately L5 and L7; Holm family 2",
+  "test_sampled_before_freeze": false,
+  "environment": {
+    "python": "3.10.20 (main, Mar  3 2026, 00:49:35) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "dependencies": {
+      "numpy": "2.2.6",
+      "scipy": "1.15.3",
+      "stim": "1.15.0",
+      "pymatching": "2.3.1"
+    },
+    "memory_method": "RSS bytes normalized for Darwin/Linux; whole process incl sampling and allocators, not decoder incremental allocation"
+  },
+  "training_shots": 1000000,
+  "status": "research-only; awaiting user review; no deployment authorization"
+}
